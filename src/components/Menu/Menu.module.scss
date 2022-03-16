@@ -51,21 +51,35 @@
 
 .footer {
   padding-top: 16px;
+  column-count: 2;
 
-  border-top: 1px solid var(--black);
+  border-top: 2px solid var(--black);
 }
 
 .authors {
+  height: 76px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+.divider {
+  flex: 1;
+  margin: 0 8px;
+  height: 2px;
+  align-self: center;
+
+  background-color: var(--yellow);
 }
 
 .author {
-
-  & span {
-
-  }
+  display: flex;
+  justify-content: space-between;
 }
 
 .info {
-
+  height: 76px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

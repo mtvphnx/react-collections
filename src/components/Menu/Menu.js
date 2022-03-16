@@ -1,5 +1,5 @@
 import styles from './Menu.module.scss';
-import {Link} from "../Link/Link";
+import {Link, Socials} from "../../components";
 import {authors, collection} from '../../date'
 import cn from 'classnames';
 
@@ -15,8 +15,9 @@ export const Menu = ({className, opened, ...props}) => {
     const generateAuthors = ({id, role, name}) => {
         return (
             <li key={id} className={styles.author}>
-                <span>{role}</span>
-                <span>{name}</span>
+                <span className="text-small">{role}</span>
+                <span className={styles.divider} />
+                <span className="text-small">{name}</span>
             </li>
         )
     }
@@ -30,7 +31,8 @@ export const Menu = ({className, opened, ...props}) => {
                 </ul>
                 <div className={styles.footer}>
                     <div className={styles.info}>
-
+                        <div className="text-small">Спецпроект <Link text="2x2.Медиа" url="https://media.2x2tv.ru" target="_blank" className="link text-small"/> © 2022</div>
+                        <Socials/>
                     </div>
                     <ul className={styles.authors}>
                         {authors && authors.map(item => generateAuthors(item))}

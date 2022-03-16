@@ -84,6 +84,34 @@ li {
   --bg-filter: rgba(21, 21, 21, 0.5);
 }
 
+.paragraph {
+  font-size: 18px;
+  line-height: 155%;
+}
+
+.link {
+  display: inline-block;
+
+  border-bottom: 1.15px solid var(--black);
+
+  font-size: 18px;
+  line-height: 130%;
+  text-decoration: none;
+  transition: .2s;
+
+  &:hover {
+    border-bottom: 1.15px solid var(--yellow);
+  }
+
+  &:after {
+    content: ' →';
+
+    font-family: 'ony', sans-serif;
+    font-size: 18px;
+    line-height: 135%;
+  }
+}
+
 .h1 {
   font-size: 72px;
   line-height: 100%;
@@ -112,32 +140,9 @@ li {
 .text-small {
   font-size: 12px;
   line-height: 135%;
-}
-
-.paragraph {
-  font-size: 18px;
-  line-height: 155%;
-}
-
-.link {
-  display: inline-block;
-
-  border-bottom: 1px solid var(--black);
-
-  font-size: 18px;
-  line-height: 130%;
-  text-decoration: none;
-  transition: .2s;
-
-  &:hover {
-    border-bottom: 1px solid var(--yellow);
-  }
 
   &:after {
-    content: ' →';
-
-    font-family: 'ony', sans-serif;
-    font-size: 18px;
+    font-size: 12px;
     line-height: 135%;
   }
 }

@@ -1,0 +1,15 @@
+.header {
+  padding: 4px 32px;
+  display: flex;
+  align-items: center;
+
+  background-color: var(--black);
+}
+
+.logo {
+  margin-right: 24px;
+}
+
+.title {
+  color: var(--white);
+}

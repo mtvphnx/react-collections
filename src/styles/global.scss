@@ -56,17 +56,32 @@ h1,
 h2,
 h3 {
   margin: 0;
+
+  font-weight: normal;
 }
 
 p {
   margin: 0;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
 :root {
   --black: #1A1A1A;
   --white: #FFFFFF;
-  --orange: #FFC600;
   --gray: #888888;
+  --yellow: #FFC600;
+
+  --bg-filter: rgba(21, 21, 21, 0.5);
 }
 
 .h1 {
@@ -102,4 +117,27 @@ p {
 .paragraph {
   font-size: 18px;
   line-height: 155%;
+}
+
+.link {
+  display: inline-block;
+
+  border-bottom: 1px solid var(--black);
+
+  font-size: 18px;
+  line-height: 130%;
+  text-decoration: none;
+  transition: .2s;
+
+  &:hover {
+    border-bottom: 1px solid var(--yellow);
+  }
+
+  &:after {
+    content: ' →';
+
+    font-family: 'ony', sans-serif;
+    font-size: 18px;
+    line-height: 135%;
+  }
 }

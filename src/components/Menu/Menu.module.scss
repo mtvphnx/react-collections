@@ -1,4 +1,5 @@
 .menu {
+  z-index: 10;
   position: fixed;
   top: 0;
   right: 0;
@@ -7,5 +8,64 @@
 
   display: none;
 
-  background-color: var(--gray);
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+
+    background: var(--bg-filter);
+    backdrop-filter: blur(3px);
+  }
+}
+
+.container {
+  position: relative;
+
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  min-width: 640px;
+  margin-left: auto;
+  height: 100%;
+  padding: 48px 32px 32px 32px;
+
+  background-color: var(--white);
+}
+
+.title {
+  margin-bottom: 32px;
+}
+
+.item {
+  margin-bottom: 8px;
+}
+
+.list {
+  margin-bottom: 72px;
+  column-count: 2;
+  flex: 1;
+}
+
+.footer {
+  padding-top: 16px;
+
+  border-top: 1px solid var(--black);
+}
+
+.authors {
+
+}
+
+.author {
+
+  & span {
+
+  }
+}
+
+.info {
+
 }

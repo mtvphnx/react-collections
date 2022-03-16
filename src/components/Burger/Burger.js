@@ -1,10 +1,11 @@
 import styles from './Burger.module.scss';
-import icon from './burger.svg';
+import openIcon from './burger.svg';
+import closeIcon from './close-burger.svg';
 
-export const Burger = ({...props}) => {
+export const Burger = ({opened, ...props}) => {
     return (
         <div className={styles.burger} {...props}>
-            <img src={icon} alt="Меню"/>
+            <img src={!opened ? openIcon : closeIcon} alt="Меню"/>
         </div>
     );
 };

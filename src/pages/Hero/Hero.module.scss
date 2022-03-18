@@ -1,0 +1,41 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  padding: 32px 124px 56px 32px;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  margin-bottom: 24px;
+}
+
+.paragraph {
+  margin-bottom: 44px;
+}
+
+.pic {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+  }
+}

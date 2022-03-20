@@ -1,6 +1,6 @@
 import styles from "./App.module.scss";
 import {Header} from "../../components";
-import {Hero} from "../../pages";
+import {Hero} from "../../layouts";
 import {useState} from "react";
 
 export const App = ({...props}) => {

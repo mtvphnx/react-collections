@@ -1,21 +1,21 @@
 export const authors = [
     {
-        id: 1,
+        id: 0,
         role: 'Текст и идея',
         name: 'Наташа Лобачева'
     },
     {
-        id: 2,
+        id: 1,
         role: 'Иллюстрации',
         name: 'Настя Dorisovala'
     },
     {
-        id: 3,
+        id: 2,
         role: 'Дизайн',
         name: 'Артем Сизов'
     },
     {
-        id: 4,
+        id: 3,
         role: 'Верстка и код',
         name: 'Матвей Phoenix'
     }

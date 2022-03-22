@@ -64,6 +64,11 @@ li {
   list-style: none;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 :root {
   --black: #1A1A1A;
   --white: #FFFFFF;
@@ -71,6 +76,10 @@ li {
   --yellow: #FFC600;
 
   --bg-filter: rgba(21, 21, 21, 0.5);
+}
+
+.simplebar-scrollbar::before {
+  background-color: var(--yellow);
 }
 
 .paragraph {

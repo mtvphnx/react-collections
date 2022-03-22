@@ -11,7 +11,7 @@ export const Header = () => {
     }
 
     return (
-        <header className={styles.header}>
+        <header className={styles.header} id="header">
             <Logo className={styles.logo} />
             <div className={cn('text-body', styles.title)}>Коллекция коллекционеров</div>
             <Burger onClick={handleClick} opened={opened}/>

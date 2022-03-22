@@ -1,6 +1,5 @@
 import styles from "./App.module.scss";
-import {Header} from "../../components";
-import {Hero} from "../../layouts";
+import {Hero, Canvas} from "../../layouts";
 import {useState} from "react";
 
 export const App = ({...props}) => {
@@ -13,7 +12,7 @@ export const App = ({...props}) => {
 
   return (
     <div className="wrapper" {...props}>
-        {!start ? <Hero handle={handleClick}/> : <Header/>}
+        {!start ? <Hero handle={handleClick}/> : <Canvas/>}
     </div>
   );
 };

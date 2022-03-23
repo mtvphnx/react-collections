@@ -10,6 +10,10 @@ html, body, .wrapper {
   min-height: 100vh;
 }
 
+body {
+  overflow: hidden;
+}
+
 
 @font-face {
   font-family: 'ony';

@@ -6,3 +6,19 @@
   width: 2260px;
   height: 1200px;
 }
+
+.modal {
+  column-count: 2;
+}
+
+.big {
+  margin-bottom: 12px;
+}
+
+.little {
+  margin-bottom: 8px;
+
+  &:last-of-type {
+    margin-bottom: 24px;
+  }
+}

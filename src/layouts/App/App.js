@@ -6,7 +6,8 @@ export const App = ({...props}) => {
 
     const [start, openApp] = useState(false);
 
-    const handleClick = () => {
+    const handleClick = (e) => {
+        e.preventDefault();
         openApp(start => !start);
     }
 

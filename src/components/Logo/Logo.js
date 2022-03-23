@@ -4,11 +4,13 @@ import cn from 'classnames';
 
 export const Logo = ({className, color, ...props}) => {
     return (
-        <img src={icon}
-             className={cn(styles.logo, className)}
-             alt="logo"
-             style={(color === 'dark' ? {filter: 'invert(1)'} : {filter: 'invert(0)'})}
-             {...props}
-        />
+        <a href="/" className={cn(styles.link, className)}>
+            <img src={icon}
+                 className={styles.logo}
+                 alt="logo"
+                 style={(color === 'dark' ? {filter: 'invert(1)'} : {filter: 'invert(0)'})}
+                 {...props}
+            />
+        </a>
     );
 };

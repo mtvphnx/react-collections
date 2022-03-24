@@ -1,11 +1,18 @@
 import styles from './Content.module.scss';
-import {Element} from '../../components';
+import {Element, Modal} from '../../components';
 import {collection} from '../../date';
+import {useState} from 'react';
 
 export const Content = ({...props}) => {
+    const [type, showModal] = useState(false);
+
     const onClickHandle = (e) => {
         const link = e.target.getAttribute('data-link');
-        console.log(link);
+        showModal('first');
+    }
+
+    const closeModal = () => {
+        showModal(false);
     }
 
     const generateElements = ({id, name, style, img, pin, link}) => {
@@ -19,6 +26,7 @@ export const Content = ({...props}) => {
         <div className={styles.wrapper}>
             <div className={styles.bg}></div>
             {collection && collection.map(item => generateElements(item))}
+            {(type === 'first') ? <Modal visible={true} onClose={closeModal}/> : null}
         </div>
     );
 };

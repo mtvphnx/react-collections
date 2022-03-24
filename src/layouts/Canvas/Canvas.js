@@ -10,7 +10,7 @@ import cn from 'classnames';
 export const Canvas = ({...props}) => {
 
     const [show, setModal] = React.useState(true);
-    const handleClick = (e) => {
+    const onClickHandle = (e) => {
         e.preventDefault();
         setModal(!show);
     };
@@ -24,11 +24,11 @@ export const Canvas = ({...props}) => {
     return (
         <>
             <Header/>
-            <Modal visible={show} type={'big'} onClose={handleClick}>
+            <Modal visible={show} type={'big'} onClose={onClickHandle}>
                 <div className={styles.modal}>
                     <Author />
                     {author && author.map(item => generateText(item))}
-                    <Link url="#" text="Смотреть коллекцию" onClick={handleClick}/>
+                    <Link url="#" text="Смотреть коллекцию" onClick={onClickHandle}/>
                 </div>
             </Modal>
             <div className={styles.canvas} {...props}>

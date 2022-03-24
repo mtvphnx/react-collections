@@ -6,7 +6,7 @@ import cn from 'classnames';
 export const Header = () => {
     const [opened, toggleMenu] = useState(false);
 
-    const handleClick = () => {
+    const onClickHandle = () => {
         toggleMenu(opened => !opened);
     }
 
@@ -14,7 +14,7 @@ export const Header = () => {
         <header className={styles.header} id="header">
             <Logo className={styles.logo} />
             <div className={cn('text-body', styles.title)}>Коллекция коллекционеров</div>
-            <Burger onClick={handleClick} opened={opened}/>
+            <Burger onClick={onClickHandle} opened={opened}/>
             <Menu style={opened ? {display: 'block'}: {display: 'none'}}/>
         </header>
     );

@@ -2,6 +2,7 @@ export const collection = [
     {
         id: 0,
         name: 'Комиксы',
+        link: 'kolliektsiia-komiksov',
         style: {
             width: "510px",
             height: "400px",
@@ -19,6 +20,7 @@ export const collection = [
     {
         id: 1,
         name: 'Пластиковые карты',
+        link: 'kolliektsiia-s-zapakhom-pyli-i-tliena',
         style: {
             width: "386px",
             height: "284px",
@@ -36,6 +38,7 @@ export const collection = [
     {
         id: 2,
         name: 'Награды',
+        link: 'kolliektsiia',
         style: {
             width: "293px",
             height: "417px",
@@ -53,6 +56,7 @@ export const collection = [
     {
         id: 3,
         name: 'Водка Absolut',
+        link: 'opianiaiushchaia-kolliektsiia-vodki-absolut',
         style: {
             width: "246px",
             height: "433px",
@@ -70,6 +74,7 @@ export const collection = [
     {
         id: 4,
         name: 'Пакетики с сахаром',
+        link: 'kolliektsiia-ghliukofila-pakietiki-s-sakharom',
         style: {
             width: "380px",
             height: "236px",
@@ -87,6 +92,7 @@ export const collection = [
     {
         id: 5,
         name: 'Пачки сигарет',
+        link: 'kolliektsiia-2',
         style: {
             width: "318px",
             height: "433px",
@@ -104,6 +110,7 @@ export const collection = [
     {
         id: 6,
         name: 'Машинки Hot Wheels',
+        link: 'goriachaia-kolliektsiia',
         style: {
             width: "450px",
             height: "199px",
@@ -121,6 +128,7 @@ export const collection = [
     {
         id: 7,
         name: 'Фотографии мертвых птиц',
+        link: 'kolliektsiia-kak-dan-pamiati-biezymiannym-zhivotnym',
         style: {
             width: "383px",
             height: "371px",
@@ -138,6 +146,7 @@ export const collection = [
     {
         id: 8,
         name: 'Винные пробки',
+        link: 'kolliektsiia-vinnykh-probok',
         style: {
             width: "215px",
             height: "231px",
@@ -155,6 +164,7 @@ export const collection = [
     {
         id: 9,
         name: 'Наушники',
+        link: 'kolliektsiia-slomannykh-naushnikov',
         style: {
             width: "266px",
             height: "334px",
@@ -172,6 +182,7 @@ export const collection = [
     {
         id: 10,
         name: 'Банки Pringles',
+        link: 'kolliektsiia-so-vkusom-pringles',
         style: {
             width: "342px",
             height: "486px",
@@ -189,6 +200,7 @@ export const collection = [
     {
         id: 11,
         name: 'Значки',
+        link: 'kolliektsionirovaniie-kak-obraz-zhizni',
         style: {
             width: "285px",
             height: "287px",
@@ -206,6 +218,7 @@ export const collection = [
     {
         id: 12,
         name: 'Пачки от хлопьев',
+        link: 'kolliektsiia-korobok-sukhikh-zavtrakov',
         style: {
             width: "328px",
             height: "404px",
@@ -223,6 +236,7 @@ export const collection = [
     {
         id: 13,
         name: 'Подставки для пива',
+        link: 'poddierzhivaiushchaia-kolliektsiia',
         style: {
             width: "293px",
             height: "278px",
@@ -240,6 +254,7 @@ export const collection = [
     {
         id: 14,
         name: 'Брелоки',
+        link: 'nostalghich',
         style: {
             width: "279px",
             height: "466px",
@@ -257,6 +272,7 @@ export const collection = [
     {
         id: 15,
         name: 'Киндер-сюрпризы',
+        link: 'shokoladnaia-kindier-kolliektsiia',
         style: {
             width: "257px",
             height: "364px",
@@ -274,6 +290,7 @@ export const collection = [
     {
         id: 16,
         name: 'Резиновые уточки',
+        link: 'kriakaiushchaia-kolliektsiia-zhioltykh-utok',
         style: {
             width: "320px",
             height: "327px",
@@ -291,6 +308,7 @@ export const collection = [
     {
         id: 17,
         name: 'Фигурки Warhammer',
+        link: 'samodielnaia-kolliektsiia-fighurok',
         style: {
             width: "278px",
             height: "298px",

@@ -3,7 +3,7 @@ import styles from './Modal.module.scss';
 import cn from 'classnames';
 
 export const Modal = ({visible = false, onClose, type = 'little', className, children, ...props}) => {
-    const onKeydown = ({key}) => {
+    const onKeyDown = ({key}) => {
         switch (key) {
             case 'Escape':
                 onClose()
@@ -12,8 +12,8 @@ export const Modal = ({visible = false, onClose, type = 'little', className, chi
     }
 
     React.useEffect(() => {
-        document.addEventListener('keydown', onKeydown)
-        return () => document.removeEventListener('keydown', onKeydown)
+        document.addEventListener('keydown', onKeyDown)
+        return () => document.removeEventListener('keydown', onKeyDown)
     })
 
     if (!visible) return null;

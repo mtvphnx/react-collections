@@ -1,9 +1,7 @@
 .element {
   position: absolute;
 
-  cursor: pointer;
-
-  &:hover {
+  &.hover {
     filter: drop-shadow(5px 0 0 var(--white)) drop-shadow(0 5px 0 var(--white)) drop-shadow(-5px 0 0 var(--white)) drop-shadow(0 -5px 0 var(--white));
   }
 
@@ -15,9 +13,9 @@
 
 .pin {
   position: absolute;
-  left: 100px;
-  top: 100px;
 
   width: 59px;
   height: 59px;
+
+  cursor: pointer;
 }

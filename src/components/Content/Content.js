@@ -3,9 +3,15 @@ import {Element} from '../../components';
 import {collection} from '../../date';
 
 export const Content = ({...props}) => {
-    const generateElements = ({id, name, style}) => {
+    function handleClick(e) {
+        const link = e.target.getAttribute('data-link');
+    }
+
+    const generateElements = ({id, name, style, img, pin}) => {
         return (
-            <Element key={id} style={style}><img src={`/elements/${id}.png`}/></Element>
+            <Element key={id} pin={pin} style={style}>
+                <img src={`/elements/${id}.png`} style={img} data-link={id} onClick={handleClick}/>
+            </Element>
         )
     }
     return (

@@ -1,6 +1,6 @@
-import React from 'react';
-import styles from './Modal.module.scss';
+import {useEffect} from 'react';
 import cn from 'classnames';
+import styles from './Modal.module.scss';
 
 export const Modal = ({visible = false, onClose, type = 'little', className, children, ...props}) => {
     const onKeyDown = ({key}) => {
@@ -11,7 +11,7 @@ export const Modal = ({visible = false, onClose, type = 'little', className, chi
         }
     }
 
-    React.useEffect(() => {
+    useEffect(() => {
         document.addEventListener('keydown', onKeyDown)
         return () => document.removeEventListener('keydown', onKeyDown)
     })

@@ -1,6 +1,6 @@
+import cn from 'classnames';
 import styles from './Logo.module.scss';
 import icon from './icons/logo.svg';
-import cn from 'classnames';
 
 export const Logo = ({className, color, ...props}) => {
     return (

@@ -1,6 +1,6 @@
+import cn from 'classnames';
 import styles from './Author.module.scss';
 import icon from './icons/author.jpg';
-import cn from 'classnames';
 
 export const Author = ({...props}) => {
     return (

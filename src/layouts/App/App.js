@@ -1,6 +1,6 @@
-import styles from "./App.module.scss";
-import {Hero, Canvas} from "../../layouts";
-import {useState} from "react";
+import {useState} from 'react';
+import {Hero, Canvas} from '../../layouts';
+import styles from './App.module.scss';
 
 export const App = ({...props}) => {
 

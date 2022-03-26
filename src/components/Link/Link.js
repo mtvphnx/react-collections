@@ -1,5 +1,5 @@
-import styles from './Link.module.scss';
 import cn from 'classnames';
+import styles from './Link.module.scss';
 
 export const Link = ({url, text, ...props}) => {
     return (

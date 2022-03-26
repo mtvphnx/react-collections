@@ -1,7 +1,7 @@
-import styles from './Content.module.scss';
-import {Element, Modal} from '../../components';
-import {collection} from '../../date';
 import {useState} from 'react';
+import {Element, Modal} from '../../components';
+import styles from './Content.module.scss';
+import {collection} from '../../date';
 
 export const Content = ({...props}) => {
     const [type, showModal] = useState(false);

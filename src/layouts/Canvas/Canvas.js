@@ -1,11 +1,10 @@
-import styles from "./Canvas.module.scss";
-import React, {useState} from "react";
+import React, {useState} from 'react';
 import {Header, Modal, Author, Link, Content} from '../../components'
-
 import SimpleBar from 'simplebar-react';
-import 'simplebar/dist/simplebar.min.css';
-import {author} from '../../date';
 import cn from 'classnames';
+import {author} from '../../date';
+import styles from './Canvas.module.scss';
+import 'simplebar/dist/simplebar.min.css';
 
 export const Canvas = ({...props}) => {
 

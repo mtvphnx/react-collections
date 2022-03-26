@@ -1,6 +1,6 @@
+import cn from 'classnames';
 import styles from './Element.module.scss';
 import icon from './icons/pin.png';
-import cn from 'classnames';
 
 export const Element = ({children, pin, onClickHandler, link, ...props}) => {
 

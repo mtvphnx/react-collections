@@ -1,7 +1,7 @@
-import styles from './Menu.module.scss';
+import cn from 'classnames';
 import {Link, Socials} from "../../components";
 import {authors, collection} from '../../date'
-import cn from 'classnames';
+import styles from './Menu.module.scss';
 
 export const Menu = ({className, opened, ...props}) => {
     const generateList = ({id, name}) => {

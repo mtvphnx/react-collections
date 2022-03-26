@@ -1,7 +1,7 @@
 import {useState} from 'react';
+import cn from 'classnames';
 import {Logo, Burger, Menu} from "../../components";
 import styles from './Header.module.scss';
-import cn from 'classnames';
 
 export const Header = () => {
     const [opened, toggleMenu] = useState(false);

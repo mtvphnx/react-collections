@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import cn from 'classnames';
-import {Logo, Burger, Menu} from "../../components";
+import {Logo, Burger, Menu} from '../../components';
 import styles from './Header.module.scss';
 
 export const Header = () => {

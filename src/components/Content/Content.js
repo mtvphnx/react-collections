@@ -9,36 +9,30 @@ export class Content extends Component {
         super(props);
         this.domain =
         this.state = {
-            showLittle: null,
-            showBig: null,
-            modalContent: null
+            showLittle: false,
+            showBig: false,
+            modalContent: ''
         }
     }
 
-    openModal = () => {
-
-    }
-
-    closeModal = () => {
+    toggleModal = () => {
         this.setState(({showLittle}) => ({
             showLittle: !showLittle
         }))
     };
 
-    generateElements = ({id, name, style, img, pin, link}) => {
+    elements = collection && collection.map(item => {
+        const {id, ...props} = item;
         return (
-            <Element key={id} pin={pin} style={style} onClickHandler={onClickHandle} link={link}>
-                <img src={`/elements/${id}.png`} style={img} />
-            </Element>
+            <Element key={id} id={id} clickHandler={() => this.toggleModal()} {...props}/>
         )
-    }
+    })
 
     render() {
         return (
             <div className={styles.wrapper}>
                 <div className={styles.bg}></div>
-                {collection && collection.map(item => this.generateElements(item))}
-                {(type === 'first') ? <Modal visible={true} onClose={this.closeModal}>{modalContent}</Modal> : null}
+                {this.elements}
             </div>
         );
     }

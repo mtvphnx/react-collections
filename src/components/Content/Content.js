@@ -1,6 +1,6 @@
 import {useState, Component} from 'react';
-import axios from 'axios';
 import {Element, Modal} from '../../components';
+import {server} from '../../services';
 import styles from './Content.module.scss';
 import {collection} from '../../date';
 
@@ -11,20 +11,29 @@ export class Content extends Component {
         this.state = {
             showLittle: false,
             showBig: false,
-            modalContent: ''
+            content: null
         }
     }
 
-    toggleModal = () => {
-        this.setState(({showLittle}) => ({
-            showLittle: !showLittle
-        }))
-    };
+    generateModal = (data, type) => {
+        console.log(data);
+    }
+
+    getArticle = async (link) => {
+        let result = await server('genshin-impact-novie-personazhi');
+        this.generateModal(result, 'little');
+    }
+
+    // toggleModal = () => {
+    //     this.setState(({showLittle}) => ({
+    //         showLittle: !showLittle
+    //     }))
+    // };
 
     elements = collection && collection.map(item => {
-        const {id, ...props} = item;
+        const {id, link, ...props} = item;
         return (
-            <Element key={id} id={id} clickHandler={() => this.toggleModal()} {...props}/>
+            <Element key={id} id={id} clickHandler={() => this.getArticle(link)} {...props}/>
         )
     })
 

@@ -4,20 +4,10 @@ import icon from './icons/pin.png';
 
 export const Element = ({name, pin, img, id, link, style, clickHandler}) => {
 
-    const hoverHandler = (e) => {
-        if (e.target.classList.contains(styles.pin)) {
-            e.target.parentElement.classList.toggle(styles.hover);
-        }
-    }
-
     return (
-        <div className={styles.element} style={style}>
+        <div className={styles.element} style={style} onClick={clickHandler}>
             <img src={`/elements/${id}.png`} style={img} alt={name} />
-            <img src={icon} style={pin} alt="2x2" className={styles.pin} data-link={link}
-                 onMouseEnter={hoverHandler}
-                 onMouseLeave={hoverHandler}
-                 onClick={clickHandler}
-                />
+            <img src={icon} style={pin} alt="2x2" className={styles.pin} data-link={link} />
         </div>
     );
 };

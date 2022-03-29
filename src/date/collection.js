@@ -78,8 +78,8 @@ export const collection = [
         style: {
             width: '380px',
             height: '236px',
-            left: '820px',
-            top: '578px'
+            left: '730px',
+            top: '590px'
         },
         img: {
             filter: 'drop-shadow(25px 10px 0 var(--yellow))'
@@ -150,8 +150,8 @@ export const collection = [
         style: {
             width: '215px',
             height: '231px',
-            left: '270px',
-            top: '436px'
+            left: '808px',
+            top: '45px'
         },
         img: {
             filter: 'drop-shadow(0 20px 0 var(--yellow))'
@@ -186,8 +186,8 @@ export const collection = [
         style: {
             width: '342px',
             height: '486px',
-            left: '413px',
-            top: '520px'
+            left: '347px',
+            top: '456px'
         },
         img: {
             filter: 'drop-shadow(15px 25px 0 var(--yellow))'

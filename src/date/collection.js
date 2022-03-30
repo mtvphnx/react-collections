@@ -38,7 +38,8 @@ export const collection = [
     {
         id: 2,
         name: 'Награды',
-        link: 'kolliektsiia',
+        // link: 'kolliektsiia',
+        link: 'mental-health-month-2x2-part-4',
         style: {
             width: '293px',
             height: '417px',
@@ -146,7 +147,8 @@ export const collection = [
     {
         id: 8,
         name: 'Винные пробки',
-        link: 'kolliektsiia-vinnykh-probok',
+        // link: 'kolliektsiia-vinnykh-probok',
+        link: 'anime-dlya-vesennego-nastroeniya',
         style: {
             width: '215px',
             height: '231px',
@@ -218,7 +220,8 @@ export const collection = [
     {
         id: 12,
         name: 'Пачки от хлопьев',
-        link: 'kolliektsiia-korobok-sukhikh-zavtrakov',
+        // link: 'kolliektsiia-korobok-sukhikh-zavtrakov',
+        link: 'anime-chtobu-otdochnut-za-prosmotrom',
         style: {
             width: '328px',
             height: '404px',

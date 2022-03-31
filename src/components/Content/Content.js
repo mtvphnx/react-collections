@@ -22,15 +22,15 @@ export class Content extends Component {
 
     toggleModal = (type) => {
         if (type === 1) {
-            this.setState(({first}) => ({first: !first}))
+            this.setState(({first}) => ({first: !first}));
         } else if (type === 2) {
-            this.setState(({second}) => ({second: !second}))
+            this.setState(({second}) => ({second: !second}));
         }
     };
 
     elements = collection && collection.map(item => {
         const {id, link, ...props} = item;
-        return <Element key={id} id={id} clickHandler={() => this.getArticle(link, 1)} {...props}/>;
+        return <Element key={id} id={id} clickHandler={() => this.getArticle(link, 2)} {...props}/>;
     })
 
     render() {
@@ -38,7 +38,7 @@ export class Content extends Component {
             <div className={styles.wrapper}>
                 <div className={styles.bg}></div>
                 {this.elements}
-                {(this.state.first) ? <Modal visible={true} onClose={() => this.toggleModal(1)}>{this.state.content.title}</Modal> : null}
+                {(this.state.second) ? <Modal visible={true} onClose={() => this.toggleModal(2)}>{this.state.content.title}</Modal> : null}
             </div>
         );
     }

@@ -45,6 +45,15 @@
       padding-top: 0;
     }
   }
+
+  & a {
+    border-bottom: 1px solid var(--black);
+    transition: .3s;
+  }
+
+  & a:hover {
+    border-bottom: 1px solid var(--yellow);
+  }
 }
 
 .link {
@@ -77,5 +86,22 @@
   & img {
     width: 28px;
     height: 28px;
+  }
+}
+
+.socials {
+  position: absolute;
+  right: 32px;
+  bottom: 56px;
+
+  flex-direction: column;
+
+  & li {
+    margin-right: 0;
+    margin-bottom: 4px;
+  }
+
+  & li:last-of-type {
+    margin-bottom: 0;
   }
 }

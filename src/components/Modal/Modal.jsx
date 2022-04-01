@@ -5,11 +5,7 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 
 export const Modal = ({visible = false, onClose, type, className, children, ...props}) => {
     const onKeyDown = ({key}) => {
-        switch (key) {
-            case 'Escape':
-                onClose();
-                break;
-        }
+        if (key === 'Escape') onClose();
     }
 
     useEffect(() => {

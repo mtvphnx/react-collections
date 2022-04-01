@@ -7,7 +7,7 @@ export const Menu = ({className, opened, ...props}) => {
     const generateList = ({id, name}) => {
         return (
             <li className={styles.item} key={id}>
-                <Link text={name} url={'#'} />
+                <Link text={name} tag={'div'} />
             </li>
         )
     }

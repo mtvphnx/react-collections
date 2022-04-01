@@ -1,6 +1,6 @@
 import {Component} from 'react';
 import PerfectScrollbar from 'react-perfect-scrollbar';
-import {Element, Modal, Article} from '../../components';
+import {Element, Article} from '../../components';
 import {server} from '../../services';
 import styles from './Content.module.scss';
 import {collection} from '../../date';

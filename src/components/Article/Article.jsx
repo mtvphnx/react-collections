@@ -1,9 +1,9 @@
 import styles from './Article.module.scss';
-import {Modal, Link} from '../../components';
+import {Modal, Link, Socials} from '../../components';
 import icon from '../Burger/icons/close.svg';
 
 export const Article = ({onClose, content}) => {
-    const {title, html, feature_image, excerpt} = content;
+    const {title, html, feature_image} = content;
     const image =  feature_image.replace('https://media.2x2tv.ru/content/images/', 'https://media.2x2tv.ru/content/images/size/w1280/');
 
     return (
@@ -15,8 +15,9 @@ export const Article = ({onClose, content}) => {
             <img className={styles.picture} src={image} alt={title}/>
             <div className={styles.wrapper}>
                 <div className={styles.content} dangerouslySetInnerHTML={{ __html: html }} />
-                <Link href={'#'} text={'Вернуться к коллекциям'} onClick={onClose} className={styles.link} />
+                <Link tag={'div'} text={'Вернуться к коллекциям'} onClick={onClose} className={styles.link} />
             </div>
+            <Socials className={styles.socials}/>
         </Modal>
     )
 }

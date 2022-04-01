@@ -15,7 +15,7 @@ export const Hero = ({handle, ...props}) => {
                     <div className={styles.content}>
                         <div className={cn(styles.title, 'h1')}>Коллекция коллекционеров</div>
                         <p className={cn(styles.paragraph, 'text-body')}>Как люди переедают Pringles ради коллекции, а желание «попищать уткой» объединяет поколения? Как глюкофилы перевозят по 10 кг сахара из города в город и оправдываются на досмотре? И главное — почему люди продолжают коллекционировать в моду на минимализм?</p>
-                        <Link url={'#'} text={'Читать далее'} onClick={handle} />
+                        <Link tag={'div'} text={'Читать далее'} onClick={handle} />
                     </div>
                 </div>
                 <div className={styles.pic}>

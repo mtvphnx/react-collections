@@ -1,5 +1,6 @@
 import {Component} from 'react';
-import {Element, Modal} from '../../components';
+import PerfectScrollbar from 'react-perfect-scrollbar';
+import {Element, Modal, Article} from '../../components';
 import {server} from '../../services';
 import styles from './Content.module.scss';
 import {collection} from '../../date';
@@ -11,8 +12,6 @@ export class Content extends Component {
             first: false, second: false, content: null
         }
     }
-
-    // <div dangerouslySetInnerHTML={{ __html: data.html }} />
 
     getArticle = async (link, type) => {
         let result = await server(link);
@@ -35,11 +34,17 @@ export class Content extends Component {
 
     render() {
         return (
-            <div className={styles.wrapper}>
-                <div className={styles.bg}></div>
-                {this.elements}
-                {(this.state.first) ? <Modal visible={true} onClose={() => this.toggleModal(1)}>{this.state.content.title}</Modal> : null}
-            </div>
+            <>
+            <PerfectScrollbar>
+                <div className={styles.block}>
+                    <div className={styles.wrapper}>
+                        <div className={styles.bg}></div>
+                        {this.elements}
+                    </div>
+                </div>
+            </PerfectScrollbar>
+            {(this.state.first) ? <Article content={this.state.content}  onClose={() => this.toggleModal(1)}/> : null}
+            </>
         );
     }
 }

@@ -1,12 +1,13 @@
 import {useEffect} from 'react';
 import cn from 'classnames';
 import styles from './Modal.module.scss';
+import PerfectScrollbar from 'react-perfect-scrollbar';
 
-export const Modal = ({visible = false, onClose, type = 'little', className, children, ...props}) => {
+export const Modal = ({visible = false, onClose, type, className, children, ...props}) => {
     const onKeyDown = ({key}) => {
         switch (key) {
             case 'Escape':
-                onClose()
+                onClose();
                 break;
         }
     }
@@ -21,11 +22,13 @@ export const Modal = ({visible = false, onClose, type = 'little', className, chi
     return (
         <div className={styles.modal} onClick={onClose}>
             <div className={styles.dialog} onClick={e => e.stopPropagation()}>
-                <div className={styles.body}>
-                    <div className={styles.content}>
-                        {children}
+                <PerfectScrollbar>
+                    <div className={styles.body}>
+                        <div className={cn(styles.content, type === 'second' ? styles.second : null)}>
+                            {children}
+                        </div>
                     </div>
-                </div>
+                </PerfectScrollbar>
             </div>
         </div>
     );

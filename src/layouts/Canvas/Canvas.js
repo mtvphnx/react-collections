@@ -1,10 +1,8 @@
 import React, {useState} from 'react';
 import {Header, Modal, Author, Link, Content} from '../../components'
-import SimpleBar from 'simplebar-react';
 import cn from 'classnames';
 import {author} from '../../date';
 import styles from './Canvas.module.scss';
-import 'simplebar/dist/simplebar.min.css';
 
 export const Canvas = ({...props}) => {
 
@@ -31,12 +29,7 @@ export const Canvas = ({...props}) => {
                 </div>
             </Modal>
             <div className={styles.canvas} {...props}>
-                <SimpleBar style={{maxHeight: window.innerHeight - 40}}
-                           scrollableNodeProps={{ref: scrollableNodeRef}}>
-                    <div className={styles.block}>
-                        <Content/>
-                    </div>
-                </SimpleBar>
+                <Content/>
             </div>
         </>
     );

@@ -1,10 +1,5 @@
 .canvas {
-  flex: 1;
-}
-
-.block {
-  width: 2260px;
-  height: 1200px;
+  height: calc(100vh - 40px);
 }
 
 .modal {

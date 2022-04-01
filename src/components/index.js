@@ -8,3 +8,4 @@ export * from './Modal/Modal';
 export * from './Author/Author';
 export * from './Content/Content';
 export * from './Element/Element';
+export * from './Article/Article';

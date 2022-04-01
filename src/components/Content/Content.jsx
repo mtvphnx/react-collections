@@ -34,16 +34,14 @@ export class Content extends Component {
     }
 
     toggleModal = (type) => {
-        if (type === 1) {
-            this.setState(({first}) => ({first: !first}))
-        } else if (type === 2) {
-            this.setState(({second}) => ({second: !second}))
-        }
+        this.setState({
+            [type]: !this.state[`${type}`]
+        })
     };
 
     elements = collection && collection.map(item => {
         const {id, link, ...props} = item;
-        return <Element key={id} id={id} link={link} clickHandler={() => this.getArticle(link, 1)} {...props}/>;
+        return <Element key={id} id={id} link={link} clickHandler={() => this.getArticle(link, 'first')} {...props}/>;
     })
 
     render() {
@@ -57,7 +55,7 @@ export class Content extends Component {
                     </div>
                 </div>
             </PerfectScrollbar>
-            {(this.state.first) ? <Article content={this.state.content} onClose={() => this.toggleModal(1)}/> : null}
+            {(this.state.first) ? <Article content={this.state.content} onClose={() => this.toggleModal('first')}/> : null}
             </>
         );
     }

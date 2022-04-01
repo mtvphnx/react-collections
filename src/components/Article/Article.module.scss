@@ -3,3 +3,79 @@
 
   padding-top: 32px;
 }
+
+.title {
+  margin-bottom: 32px;
+  margin-right: 72px;
+
+  font-size: 48px;
+  line-height: 100%;
+}
+
+.picture {
+  width: 100%;
+}
+
+.content {
+  max-width: 592px;
+  margin-right: 208px;
+
+  color: #000000;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+
+  & p {
+    margin-bottom: 24px;
+
+    font-size: 18px;
+    line-height: 155%;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  & h3 {
+    padding-top: 16px;
+    margin-bottom: 32px;
+
+    font-size: 36px;
+    line-height: 100%;
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+  }
+}
+
+.link {
+  margin-top: 32px;
+}
+
+.close {
+  position: relative;
+
+  width: 56px;
+  height: 56px;
+
+  cursor: pointer;
+
+  & img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    width: 28px;
+    height: 28px;
+  }
+}

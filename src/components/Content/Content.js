@@ -9,13 +9,27 @@ export class Content extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            first: false, second: false, content: null
+            first: false,
+            second: false,
+            content: null
         }
     }
 
+    async componentDidMount(){
+        const result = await server(),
+            ready = result.map(item => item.slug);
+
+        const array = document.querySelectorAll('.element');
+        array.forEach(item => {
+            if (ready.indexOf(item.getAttribute('data-link')) === -1) {
+                item.classList.add('disabled');
+            }
+        });
+    }
+
     getArticle = async (link, type) => {
-        let result = await server(link);
-        this.setState({content: result});
+        const result = await server(link);
+        this.setState({content: result[0]});
         this.toggleModal(type);
     }
 
@@ -29,7 +43,7 @@ export class Content extends Component {
 
     elements = collection && collection.map(item => {
         const {id, link, ...props} = item;
-        return <Element key={id} id={id} clickHandler={() => this.getArticle(link, 1)} {...props}/>;
+        return <Element key={id} id={id} link={link} clickHandler={() => this.getArticle(link, 1)} {...props}/>;
     })
 
     render() {
@@ -43,7 +57,7 @@ export class Content extends Component {
                     </div>
                 </div>
             </PerfectScrollbar>
-            {(this.state.first) ? <Article content={this.state.content}  onClose={() => this.toggleModal(1)}/> : null}
+            {(this.state.first) ? <Article content={this.state.content} onClose={() => this.toggleModal(1)}/> : null}
             </>
         );
     }

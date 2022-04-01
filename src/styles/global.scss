@@ -161,7 +161,7 @@ li {
 
   &__wrap {
     position: absolute;
-    right: 32px;
+    right: 0;
     top: 32px;
 
     text-align: right;
@@ -197,42 +197,11 @@ li {
   }
 }
 
-.content {
-  max-width: 592px;
-  margin-right: 70px;
-
-  color: #000000;
-  font-feature-settings: 'tnum' on, 'lnum' on;
-
-  & p {
-    margin-bottom: 24px;
-
-    font-size: 18px;
-    line-height: 155%;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-
-  & h3 {
-    padding-top: 16px;
-    margin-bottom: 32px;
-
-    font-size: 36px;
-    line-height: 100%;
-
-    &:first-of-type {
-      padding-top: 0;
-    }
-  }
-}
-
 .absolute-pic ~ .kg-card {
   position: absolute;
 
   padding: 0;
-  right: 32px;
+  right: 0;
   width: 176px;
   margin: 0;
 
@@ -362,4 +331,10 @@ li {
 .ps__rail-x:focus > .ps__thumb-x,
 .ps__rail-x.ps--clicking .ps__thumb-x {
   background-color: var(--yellow);
+}
+
+.element.disabled {
+  filter: grayscale(1);
+
+  cursor: default;
 }

@@ -1,6 +1,6 @@
 import styles from './Burger.module.scss';
-import burger from './icons/burger.svg';
-import close from './icons/close.svg';
+import burger from '../../resources/icons/burger.svg';
+import close from '../../resources/icons/close.svg';
 
 export const Burger = ({opened, ...props}) => {
     return (

@@ -4,10 +4,10 @@ import {authors, collection} from '../../date'
 import styles from './Menu.module.scss';
 
 export const Menu = ({className, opened, ...props}) => {
-    const generateList = ({id, name}) => {
+    const generateList = ({id, name, link}) => {
         return (
             <li className={styles.item} key={id}>
-                <Link text={name} tag={'div'} />
+                <Link text={name} tag={'div'} data-link={link} />
             </li>
         )
     }

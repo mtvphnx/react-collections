@@ -11,9 +11,7 @@ export const Modal = ({visible = false, onClose, type, className, children, ...p
     useEffect(() => {
         document.addEventListener('keydown', onKeyDown)
         return () => document.removeEventListener('keydown', onKeyDown)
-    })
-
-    if (!visible) return null;
+    });
 
     return (
         <div className={styles.modal} onClick={onClose}>

@@ -55,7 +55,8 @@ export class Content extends Component {
                     </div>
                 </div>
             </PerfectScrollbar>
-            {(this.state.first) ? <Article content={this.state.content} onClose={() => this.toggleModal('first')}/> : null}
+
+            {(this.state.first) ? <Article content={this.state.content} handler={() => this.toggleModal('first')}/> : null}
             </>
         );
     }

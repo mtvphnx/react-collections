@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {App} from './layouts/'
+import {App} from './components/'
 import './styles/reset.scss';
 import './styles/perfectscroll.scss';
 import './styles/global.scss';

@@ -1,11 +1,3 @@
-//html {
-//  font-size: math.div(16, $desktop-weight) * 100vw;
-//
-//  @media (max-width: ($mobile + px)) {
-//    font-size: math.div(16, $mobile-weight) * 100vw;
-//  }
-//}
-
 html, body, .wrapper {
   min-height: 100vh;
   max-height: 100vh;

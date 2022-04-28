@@ -3,7 +3,7 @@ import cn from 'classnames';
 import styles from './Modal.module.scss';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 
-export const Modal = ({visible = false, onClose, type, className, children, ...props}) => {
+export const Modal = ({onClose, type, className, children}) => {
     const onKeyDown = ({key}) => {
         if (key === 'Escape') onClose();
     }
@@ -14,7 +14,8 @@ export const Modal = ({visible = false, onClose, type, className, children, ...p
     });
 
     return (
-        <div className={styles.modal} onClick={onClose}>
+        <div className={styles.modal}
+             onClick={onClose}>
             <div className={styles.dialog} onClick={e => e.stopPropagation()}>
                 <PerfectScrollbar>
                     <div className={styles.body}>

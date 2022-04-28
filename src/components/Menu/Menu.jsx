@@ -1,18 +1,37 @@
 import cn from 'classnames';
 import {Link, Socials} from "../../components";
-import {authors, collection} from '../../date'
+import {collection} from '../../date'
 import styles from './Menu.module.scss';
 
-export const Menu = ({className, opened, ...props}) => {
-    const generateList = ({id, name, link}) => {
-        return (
-            <li className={styles.item} key={id}>
-                <Link text={name} tag={'div'} data-link={link} />
-            </li>
-        )
+export const Menu = ({handler, opened, toggleState, getArticle}) => {
+
+    const authors = [
+        {id: 0, role: 'Текст и идея', name: 'Наташа Лобачёва'},
+        {id: 1, role: 'Иллюстратор', name: 'Анастасия Dorisovala'},
+        {id: 2, role: 'Дизайн', name: 'Артём Сизов'},
+        {id: 3, role: 'Художница', name: 'Маргарита Правосудова'},
+        {id: 4, role: 'Художница', name: 'Евгения Лазарева'},
+        {id: 5, role: 'Разработка', name: 'Матвей Феникс'}
+    ];
+
+    const clickHandler = (link, modal, close) => {
+        toggleState(close);
+        getArticle(link, 'first')
     }
 
-    const generateAuthors = ({id, role, name}) => {
+    const collectionslist = collection.map(item => {
+        const {id, name, link} = item;
+
+        return (
+            <li className={styles.item} key={id}>
+                <Link text={name} tag={'div'} data-link={link} onClick={() => clickHandler(link, 'first', 'menu')} />
+            </li>
+        )
+    })
+
+    const autorsList = authors.map(item => {
+        const {id, role, name} = item;
+
         return (
             <li key={id} className={styles.author}>
                 <span className="text-small">{role}</span>
@@ -20,22 +39,24 @@ export const Menu = ({className, opened, ...props}) => {
                 <span className="text-small">{name}</span>
             </li>
         )
-    }
+    })
+
+    const media = <Link text="2x2.Медиа" url="https://media.2x2tv.ru" target="_blank" className="link text-small"/>
 
     return (
-        <div className={cn(styles.menu, className)} {...props}>
-            <div className={styles.container}>
+        <div className={styles.menu} style={opened ? {display: 'block'}: {display: 'none'}} onClick={handler}>
+            <div className={styles.container} onClick={e => e.stopPropagation()}>
                 <h3 className={cn('h3', styles.title)}>Коллекция коллекционеров</h3>
                 <ul className={styles.list}>
-                    {collection && collection.map(item => generateList(item))}
+                    {collectionslist}
                 </ul>
                 <div className={styles.footer}>
                     <div className={styles.info}>
-                        <div className="text-small">Спецпроект <Link text="2x2.Медиа" url="https://media.2x2tv.ru" target="_blank" className="link text-small"/> © 2022</div>
+                        <div className="text-small">Спецпроект {media} © 2022</div>
                         <Socials/>
                     </div>
                     <ul className={styles.authors}>
-                        {authors && authors.map(item => generateAuthors(item))}
+                        {autorsList}
                     </ul>
                 </div>
             </div>

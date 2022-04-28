@@ -1,7 +1,7 @@
 import {Logo, Socials, Link} from '../../components'
 import cn from 'classnames';
 import styles from './Hero.module.scss';
-import pic from './icons/hero.jpg';
+import pic from '../../resources/pics/hero.jpg';
 
 export const Hero = ({handler}) => {
     return (

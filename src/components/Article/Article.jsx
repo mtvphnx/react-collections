@@ -7,6 +7,12 @@ export const Article = ({handler, content}) => {
 
     const src = feature_image.replace('https://media.2x2tv.ru/content/images/', 'https://media.2x2tv.ru/content/images/size/h550/');
 
+    const sharing = [
+        {id: 0, link: `https://vk.com/share.php?url=${'https://media.2x2tv.ru'}&title=${title}&image=${src}`},
+        {id: 1, link: `https://t.me/share/url?url=${'https://media.2x2tv.ru'}&text=${title}`},
+        {id: 2, link: `https://connect.ok.ru/offer?url=${'https://media.2x2tv.ru'}&title=${title}&imageUrl=${src}`},
+    ];
+
     return (
         <Modal type={'second'} onClose={handler}>
             <div className={styles.close} onClick={handler}>
@@ -26,7 +32,7 @@ export const Article = ({handler, content}) => {
                       onClick={handler}
                       className={styles.link} />
             </div>
-            <Socials className={styles.socials}/>
+            <Socials data={sharing} className={styles.socials}/>
         </Modal>
     )
 }

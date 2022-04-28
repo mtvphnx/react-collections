@@ -6,15 +6,6 @@ import styles from './Content.module.scss';
 import {collection} from '../../date';
 
 export class Content extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            first: false,
-            second: false,
-            content: null
-        }
-    }
-
     async componentDidMount(){
         const result = await server(),
             ready = result.map(item => item.slug);
@@ -27,24 +18,14 @@ export class Content extends Component {
         });
     }
 
-    getArticle = async (link, type) => {
-        const result = await server(link);
-        this.setState({content: result[0]});
-        this.toggleModal(type);
-    }
-
-    toggleModal = (type) => {
-        this.setState({
-            [type]: !this.state[`${type}`]
-        })
-    };
-
     elements = collection && collection.map(item => {
         const {id, link, ...props} = item;
-        return <Element key={id} id={id} link={link} clickHandler={() => this.getArticle(link, 'first')} {...props}/>;
+        return <Element key={id} id={id} link={link} handler={() => this.props.getArticle(link, 'first')} {...props}/>;
     })
 
     render() {
+        const {toggleState, first, content} = this.props;
+
         return (
             <>
             <PerfectScrollbar>
@@ -56,7 +37,7 @@ export class Content extends Component {
                 </div>
             </PerfectScrollbar>
 
-            {(this.state.first) ? <Article content={this.state.content} handler={() => this.toggleModal('first')}/> : null}
+            {first ? <Article content={content} handler={() => toggleState('first')}/> : null}
             </>
         );
     }

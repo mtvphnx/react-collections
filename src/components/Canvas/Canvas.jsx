@@ -1,46 +1,48 @@
 import {Component} from 'react';
-import {Header, Modal, Author, Link, Content} from '../../components'
-import cn from 'classnames';
-import {author} from '../../date';
+import {Header, Modal, Author, Content} from '../../components';
+import {server} from '../../services';
 import styles from './Canvas.module.scss';
 
 export class Canvas extends Component {
     state = {
-        author: true
+        author: true,
+        menu: false,
+        first: false,
+        second: false,
+        content: null
     }
 
-    onClickAuthor = () => {
-        this.setState(({author}) => ({
-            author: !author
-        }));
+    getArticle = async (link, type) => {
+        const result = await server(link);
+        this.setState({content: result[0]});
+        this.toggleState(type);
     }
 
-    text = author.map(item => {
-        const {id, text} = item;
+    toggleState = (name) => {
+        this.setState({
+            [name]: !this.state[`${name}`]
+        })
+    };
 
-        const little = <p key={id} className={cn('text-small', styles.little)}>{text}</p>,
-            big = <p key={id} className={cn('text-body', styles.big)}>{text}</p>;
+    onClickAuthor = () => this.toggleState('author');
 
-        return (id < 2) ? big : little;
-    })
-
-    modalContent = (
-        <div className={styles.modal}>
-            <Author />
-            {this.text}
-            <Link tag={'div'} text="Смотреть коллекцию" onClick={this.onClickAuthor}/>
-        </div>
-    )
+    onClickMenu = () => this.toggleState('menu');
 
     render() {
-        const {author} = this.state;
+        const {author, menu, first, content} = this.state;
 
         return (
             <>
-                <Header/>
-                {author ? <Modal type={'big'} onClose={this.onClickAuthor}>{this.modalContent}</Modal> : null}
+                <Header handler={this.onClickMenu}
+                        getArticle={this.getArticle}
+                        toggleState={this.toggleState}
+                        opened={menu}/>
+                {author ? <Modal type={'big'} onClose={this.onClickAuthor}><Author handler={this.onClickAuthor}/></Modal> : null}
                 <div className={styles.canvas}>
-                    <Content/>
+                    <Content getArticle={this.getArticle}
+                             toggleState={this.toggleState}
+                             first={first}
+                             content={content} />
                 </div>
             </>
         );

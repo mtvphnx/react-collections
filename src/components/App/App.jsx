@@ -12,6 +12,21 @@ export class App extends Component {
         content: null
     }
 
+    async componentDidMount(){
+        const result = await server(),
+            ready = result.map(item => item.slug);
+
+        const arrayElements = document.querySelectorAll('.element'),
+            navElements = document.querySelectorAll('.nav');
+
+        arrayElements && arrayElements.forEach((item, index) => {
+            if (ready.indexOf(item.getAttribute('data-link')) === -1) {
+                item.classList.add('disabled');
+                navElements[index].classList.add('disabled');
+            }
+        });
+    }
+
     getArticle = async (link, type) => {
         const result = await server(link);
         this.setState({content: result[0]});

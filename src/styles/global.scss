@@ -251,6 +251,15 @@ li {
 
 .element.disabled {
   filter: grayscale(1);
+  pointer-events: none;
 
   cursor: default;
+}
+
+.nav.disabled {
+  pointer-events: none;
+
+  cursor: default;
+  opacity: .5;
+  border-bottom: 1.15px solid var(--white);
 }

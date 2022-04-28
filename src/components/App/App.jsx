@@ -1,24 +1,50 @@
 import {Component} from 'react';
-import {Hero, Canvas} from '../../components';
+import {Header, Modal, Author, Content} from '../../components';
+import {server} from '../../services';
+import styles from './App.module.scss';
 
 export class App extends Component {
     state = {
-        start: true
+        author: true,
+        menu: false,
+        first: false,
+        second: false,
+        content: null
     }
 
-    onClickStart = () => {
-        this.setState(({start}) => ({
-            start: !start
-        }));
+    getArticle = async (link, type) => {
+        const result = await server(link);
+        this.setState({content: result[0]});
+        this.toggleState(type);
+    }
+
+    toggleState = (name) => {
+        this.setState({
+            [name]: !this.state[`${name}`]
+        })
     };
 
+    onClickAuthor = () => this.toggleState('author');
+
+    onClickMenu = () => this.toggleState('menu');
+
     render() {
-        const {start} = this.state;
+        const {author, menu, first, content} = this.state;
 
         return (
-            <div className="wrapper">
-                {start ? <Hero handler={this.onClickStart}/> : <Canvas/>}
-            </div>
+            <>
+                <Header handler={this.onClickMenu}
+                        getArticle={this.getArticle}
+                        toggleState={this.toggleState}
+                        opened={menu}/>
+                {author ? <Modal type={'big'} onClose={this.onClickAuthor}><Author handler={this.onClickAuthor}/></Modal> : null}
+                <div className={styles.canvas}>
+                    <Content getArticle={this.getArticle}
+                             toggleState={this.toggleState}
+                             first={first}
+                             content={content} />
+                </div>
+            </>
         );
     }
 };

@@ -6,6 +6,10 @@
     filter: drop-shadow(5px 0 0 var(--white)) drop-shadow(0 5px 0 var(--white)) drop-shadow(-5px 0 0 var(--white)) drop-shadow(0 -5px 0 var(--white));
   }
 
+  @media (max-width: 720px) {
+    filter: drop-shadow(3px 0 0 var(--white)) drop-shadow(0 3px 0 var(--white)) drop-shadow(-3px 0 0 var(--white)) drop-shadow(0 -3px 0 var(--white));
+  }
+
   & img:not(.pin) {
     width: 100%;
     height: 100%;
@@ -17,4 +21,9 @@
 
   width: 59px;
   height: 59px;
+
+  @media (max-width: 720px) {
+    width: 28px;
+    height: 28px;
+  }
 }

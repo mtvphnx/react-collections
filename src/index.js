@@ -1,13 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {App} from './components/'
+import {Hero, App} from './components';
 import './styles/reset.scss';
 import './styles/perfectscroll.scss';
 import './styles/global.scss';
 
+export class Collection extends React.Component {
+    state = {
+        start: true
+    }
+
+    onClickStart = () => {
+        this.setState(({start}) => ({
+            start: !start
+        }));
+    };
+
+    render() {
+        const {start} = this.state;
+
+        return (
+            <div className="wrapper">
+                {start ? <Hero handler={this.onClickStart}/> : <App/>}
+            </div>
+        );
+    }
+};
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <App/>
+    <Collection/>
   </React.StrictMode>,
   document.getElementById('root')
 );

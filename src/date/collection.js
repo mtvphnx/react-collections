@@ -9,12 +9,27 @@ export const collection = [
             right: '24px',
             top: '45px'
         },
-        img: {
+        shadow: {
             filter: 'drop-shadow(25px 10px 0 var(--yellow))'
         },
         pin: {
             top: '58px',
             right: '36px'
+        },
+        mobile: {
+            style: {
+                left: '40px',
+                bottom: '15px',
+                width: '245px',
+                height: '192px'
+            },
+            shadow: {
+                filter: 'drop-shadow(12px 5px 0 var(--yellow))'
+            },
+            pin: {
+                top: '28px',
+                right: '17px'
+            }
         }
     },
     {
@@ -27,12 +42,27 @@ export const collection = [
             left: '677px',
             bottom: '48px'
         },
-        img: {
+        shadow: {
             filter: 'drop-shadow(15px 20px 0 var(--yellow))'
         },
         pin: {
             top: '64px',
             right: '21px'
+        },
+        mobile: {
+            style: {
+                bottom: '425px',
+                left: '12px',
+                width: '185px',
+                height: '136px'
+            },
+            shadow: {
+                filter: 'drop-shadow(7px 10px 0 var(--yellow))'
+            },
+            pin: {
+                top: '31px',
+                right: '10px'
+            }
         }
     },
     {
@@ -45,12 +75,27 @@ export const collection = [
             left: '74px',
             top: '40px'
         },
-        img: {
+        shadow: {
             filter: 'drop-shadow(10px 20px 0 var(--yellow))'
         },
         pin: {
             left: '17px',
             bottom: '97px'
+        },
+        mobile: {
+            style: {
+                top: '16px',
+                left: '32px',
+                width: '141px',
+                height: '200px'
+            },
+            shadow: {
+                filter: 'drop-shadow(5px 10px 0 var(--yellow))'
+            },
+            pin: {
+                left: '8px',
+                bottom: '47px'
+            }
         }
     },
     {
@@ -63,12 +108,27 @@ export const collection = [
             left: '1073px',
             top: '49px'
         },
-        img: {
+        shadow: {
             filter: 'drop-shadow(25px 10px 0 var(--yellow))'
         },
         pin: {
             right: '28px',
             bottom: '127px'
+        },
+        mobile: {
+            style: {
+                left: '34px',
+                bottom: '578px',
+                width: '118px',
+                height: '208px'
+            },
+            shadow: {
+                filter: 'drop-shadow(12px 5px 0 var(--yellow))'
+            },
+            pin: {
+                right: '14px',
+                bottom: '61px'
+            }
         }
     },
     {
@@ -81,12 +141,27 @@ export const collection = [
             left: '730px',
             top: '590px'
         },
-        img: {
+        shadow: {
             filter: 'drop-shadow(25px 10px 0 var(--yellow))'
         },
         pin: {
             top: '89px',
             right: '70px'
+        },
+        mobile: {
+            style: {
+                right: '44px',
+                bottom: '738px',
+                width: '182px',
+                height: '113px'
+            },
+            shadow: {
+                filter: 'drop-shadow(12px 5px 0 var(--yellow))'
+            },
+            pin: {
+                top: '43px',
+                right: '34px'
+            }
         }
     },
     {
@@ -99,12 +174,27 @@ export const collection = [
             right: '819px',
             bottom: '44px'
         },
-        img: {
+        shadow: {
             filter: 'drop-shadow(15px 25px 0 var(--yellow))'
         },
         pin: {
             right: '64px',
             bottom: '65px'
+        },
+        mobile: {
+            style: {
+                width: '153px',
+                height: '208px',
+                top: '738px',
+                left: '26px'
+            },
+            shadow: {
+                filter: 'drop-shadow(7px 12px 0 var(--yellow))'
+            },
+            pin: {
+                bottom: '31px',
+                right: '31px'
+            }
         }
     },
     {
@@ -117,12 +207,27 @@ export const collection = [
             left: '88px',
             bottom: '43px'
         },
-        img: {
+        shadow: {
             filter: 'drop-shadow(20px 18px 0 var(--yellow))'
         },
         pin: {
             top: '17px',
             left: '14px'
+        },
+        mobile: {
+            style: {
+                top: '471px',
+                left: '27px',
+                width: '216px',
+                height: '95px'
+            },
+            shadow: {
+                filter: 'drop-shadow(10px 9px 0 var(--yellow))'
+            },
+            pin: {
+                top: '8px',
+                left: '7px'
+            }
         }
     },
     {
@@ -135,12 +240,27 @@ export const collection = [
             right: '62px',
             bottom: '33px'
         },
-        img: {
+        shadow: {
             filter: 'drop-shadow(15px 18px 0 var(--yellow))'
         },
         pin: {
             right: '34px',
             bottom: '130px'
+        },
+        mobile: {
+            style: {
+                bottom: '231px',
+                left: '9px',
+                width: '184px',
+                height: '178px'
+            },
+            shadow: {
+                filter: 'drop-shadow(7px 9px 0 var(--yellow))'
+            },
+            pin: {
+                bottom: '62px',
+                right: '16px',
+            }
         }
     },
     {
@@ -153,12 +273,27 @@ export const collection = [
             left: '808px',
             top: '45px'
         },
-        img: {
+        shadow: {
             filter: 'drop-shadow(0 20px 0 var(--yellow))'
         },
         pin: {
             top: '32px',
             right: '62px'
+        },
+        mobile: {
+            style: {
+                top: '210px',
+                left: '117px',
+                width: '103px',
+                height: '110px'
+            },
+            shadow: {
+                filter: 'drop-shadow(0 10px 0 var(--yellow))'
+            },
+            pin: {
+                top: '15px',
+                right: '30px'
+            }
         }
     },
     {
@@ -171,12 +306,27 @@ export const collection = [
             right: '33px',
             top: '469px'
         },
-        img: {
+        shadow: {
             filter: 'drop-shadow(10px 15px 0 var(--yellow))'
         },
         pin: {
             top: '50px',
             right: '18px'
+        },
+        mobile: {
+            style: {
+                right: '18px',
+                bottom: '218px',
+                width: '128px',
+                height: '161px'
+            },
+            shadow: {
+                filter: 'drop-shadow(5px 7px 0 var(--yellow))'
+            },
+            pin: {
+                top: '24px',
+                right: '9px'
+            }
         }
     },
     {
@@ -189,12 +339,27 @@ export const collection = [
             left: '347px',
             top: '456px'
         },
-        img: {
+        shadow: {
             filter: 'drop-shadow(15px 25px 0 var(--yellow))'
         },
         pin: {
             left: '46px',
             bottom: '171px'
+        },
+        mobile: {
+            style: {
+                top: '246px',
+                right: '9px',
+                width: '164px',
+                height: '233px'
+            },
+            shadow: {
+                filter: 'drop-shadow(7px 12px 0 var(--yellow))'
+            },
+            pin: {
+                bottom: '82px',
+                left: '22px'
+            }
         }
     },
     {
@@ -207,12 +372,27 @@ export const collection = [
             right: '571px',
             top: '36px'
         },
-        img: {
+        shadow: {
             filter: 'drop-shadow(13px 20px 0 var(--yellow))'
         },
         pin: {
             right: '19px',
             bottom: '64px'
+        },
+        mobile: {
+            style: {
+                top: '564px',
+                right: '10px',
+                width: '137px',
+                height: '138px'
+            },
+            shadow: {
+                filter: 'drop-shadow(6px 10px 0 var(--yellow))'
+            },
+            pin: {
+                bottom: '31px',
+                right: '10px'
+            }
         }
     },
     {
@@ -225,12 +405,27 @@ export const collection = [
             left: '423px',
             top: '50px'
         },
-        img: {
+        shadow: {
             filter: 'drop-shadow(10px 20px 0 var(--yellow))'
         },
         pin: {
             left: '16px',
             top: '65px'
+        },
+        mobile: {
+            style: {
+                top: '29px',
+                right: '10px',
+                width: '157px',
+                height: '194px'
+            },
+            shadow: {
+                filter: 'drop-shadow(5px 10px 0 var(--yellow))'
+            },
+            pin: {
+                top: '30px',
+                left: '7px'
+            }
         }
     },
     {
@@ -243,12 +438,27 @@ export const collection = [
             left: '762px',
             top: '284px'
         },
-        img: {
+        shadow: {
             filter: 'drop-shadow(10px 15px 0 var(--yellow))'
         },
         pin: {
             left: '17px',
             bottom: '66px'
+        },
+        mobile: {
+            style: {
+                top: '582px',
+                left: '33px',
+                width: '141px',
+                height: '134px'
+            },
+            shadow: {
+                filter: 'drop-shadow(5px 7px 0 var(--yellow))'
+            },
+            pin: {
+                bottom: '32px',
+                left: '8px'
+            }
         }
     },
     {
@@ -261,12 +471,27 @@ export const collection = [
             left: '49px',
             top: '475px'
         },
-        img: {
+        shadow: {
             filter: 'drop-shadow(15px 15px 0 var(--yellow))'
         },
         pin: {
             right: '52px',
             top: '200px'
+        },
+        mobile: {
+            style: {
+                top: '232px',
+                left: '11px',
+                width: '134px',
+                height: '224px'
+            },
+            shadow: {
+                filter: 'drop-shadow(7px 7px 0 var(--yellow))'
+            },
+            pin: {
+                top: '96px',
+                right: '25px'
+            }
         }
     },
     {
@@ -279,12 +504,27 @@ export const collection = [
             right: '489px',
             bottom: '36px'
         },
-        img: {
+        shadow: {
             filter: 'drop-shadow(12px 18px 0 var(--yellow))'
         },
         pin: {
             right: '17px',
             bottom: '73px'
+        },
+        mobile: {
+            style: {
+                top: '719px',
+                right: '15px',
+                width: '132px',
+                height: '175px'
+            },
+            shadow: {
+                filter: 'drop-shadow(6px 9px 0 var(--yellow))'
+            },
+            pin: {
+                bottom: '35px',
+                right: '8px'
+            }
         }
     },
     {
@@ -297,12 +537,27 @@ export const collection = [
             right: '651px',
             top: '392px'
         },
-        img: {
+        shadow: {
             filter: 'drop-shadow(15px 13px 0 var(--yellow))'
         },
         pin: {
             right: '16px',
             bottom: '118px'
+        },
+        mobile: {
+            style: {
+                bottom: '575px',
+                right: '15px',
+                width: '154px',
+                height: '157px'
+            },
+            shadow: {
+                filter: 'drop-shadow(7px 6px 0 var(--yellow))'
+            },
+            pin: {
+                bottom: '57px',
+                right: '8px'
+            }
         }
     },
     {
@@ -315,12 +570,27 @@ export const collection = [
             right: '342px',
             top: '494px'
         },
-        img: {
+        shadow: {
             filter: 'drop-shadow(18px 17px 0 var(--yellow))'
         },
         pin: {
             left: '51px',
             bottom: '17px'
+        },
+        mobile: {
+            style: {
+                bottom: '396px',
+                right: '13px',
+                width: '134px',
+                height: '143px'
+            },
+            shadow: {
+                filter: 'drop-shadow(9px 8px 0 var(--yellow))'
+            },
+            pin: {
+                bottom: '8px',
+                left: '25px'
+            }
         }
     }
 ]

@@ -20,7 +20,7 @@ export const Socials = ({className, data, ...props}) => {
     const currentArray = !data ? socials : sharing;
 
     const list = currentArray.map(item => {
-        const {id, link, name} = item;
+        const {id, link} = item;
 
         return (
             <li className={styles.item} key={id}>

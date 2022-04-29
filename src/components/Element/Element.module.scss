@@ -1,13 +1,15 @@
+@import "../../styles/functions";
+
 .element {
   position: absolute;
   cursor: pointer;
 
   &:hover {
-    filter: drop-shadow(5px 0 0 var(--white)) drop-shadow(0 5px 0 var(--white)) drop-shadow(-5px 0 0 var(--white)) drop-shadow(0 -5px 0 var(--white));
+    filter: drop-shadow(rem(5px) 0 0 var(--white)) drop-shadow(0 rem(5px) 0 var(--white)) drop-shadow(rem(-5px) 0 0 var(--white)) drop-shadow(0 rem(-5px) 0 var(--white));
   }
 
   @media (max-width: 720px) {
-    filter: drop-shadow(3px 0 0 var(--white)) drop-shadow(0 3px 0 var(--white)) drop-shadow(-3px 0 0 var(--white)) drop-shadow(0 -3px 0 var(--white));
+    filter: drop-shadow(rem(3px) 0 0 var(--white)) drop-shadow(0 rem(3px) 0 var(--white)) drop-shadow(rem(-3px) 0 0 var(--white)) drop-shadow(0 rem(-3px) 0 var(--white));
   }
 
   & img:not(.pin) {
@@ -19,11 +21,11 @@
 .pin {
   position: absolute;
 
-  width: 59px;
-  height: 59px;
+  width: rem(59px);
+  height: rem(59px);
 
   @media (max-width: 720px) {
-    width: 28px;
-    height: 28px;
+    width: rem(28px);
+    height: rem(28px);
   }
 }

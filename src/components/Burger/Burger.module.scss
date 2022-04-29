@@ -1,9 +1,11 @@
+@import "../../styles/functions";
+
 .burger {
   z-index: 20;
 
   margin-left: auto;
-  width: 24px;
-  height: 24px;
+  width: rem(24px);
+  height: rem(24px);
 
   cursor: pointer;
 

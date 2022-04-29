@@ -1,8 +1,17 @@
-html, body, .wrapper {
-  min-height: 100vh;
-  max-height: 100vh;
-}
+@use "sass:math";
+@import "functions";
 
+$desktop-figma: 1280;
+$mobile-breakpoint: 720;
+$mobile-figma: 360;
+
+html {
+  font-size: math.div(16, $desktop-figma) * 100vw;
+
+  @media (max-width: ($mobile-breakpoint + px)) {
+    font-size: math.div(16, $mobile-figma) * 100vw;
+  }
+}
 
 @font-face {
   font-family: 'ony';
@@ -11,6 +20,11 @@ html, body, .wrapper {
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+html, body, .wrapper {
+  min-height: 100vh;
+  max-height: 100vh;
 }
 
 html,
@@ -30,7 +44,7 @@ a {
   color: inherit;
 }
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -72,67 +86,67 @@ li {
 }
 
 .paragraph {
-  font-size: 18px;
+  font-size: rem(18px);
   line-height: 155%;
 }
 
 .link {
   display: inline-block;
 
-  border-bottom: 1.15px solid var(--black);
+  border-bottom: 1.5px solid var(--black);
 
-  font-size: 18px;
+  font-size: rem(18px);
   line-height: 130%;
   text-decoration: none;
   transition: .2s;
   cursor: pointer;
 
   &:hover {
-    border-bottom: 1.15px solid var(--yellow);
+    border-bottom: 1.5px solid var(--yellow);
   }
 
   &:after {
     content: ' →';
 
     font-family: 'ony', sans-serif;
-    font-size: 18px;
+    font-size: rem(18px);
     line-height: 135%;
   }
 }
 
 .h1 {
-  font-size: 72px;
+  font-size: rem(72px);
   line-height: 100%;
   letter-spacing: 0.01em;
 }
 
 .h2 {
-  font-size: 48px;
+  font-size: rem(48px);
   line-height: 100%;
 }
 
 .h3 {
-  font-size: 36px;
+  font-size: rem(36px);
   line-height: 100%;
 }
 
 .text-lead {
-  font-size: 24px;
+  font-size: rem(24px);
   line-height: 135%;
 }
 
 .text-body {
-  font-size: 18px;
+  font-size: rem(18px);
   line-height: 135%;
   letter-spacing: 0.01em;
 }
 
 .text-small {
-  font-size: 12px;
+  font-size: rem(12px);
   line-height: 135%;
 
   &:after {
-    font-size: 12px;
+    font-size: rem(12px);
     line-height: 135%;
   }
 }
@@ -140,18 +154,18 @@ li {
 .collection-desc {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 32px;
+  margin-bottom: rem(32px);
 
   &__text {
     font-weight: 400;
-    font-size: 24px;
+    font-size: rem(24px);
     line-height: 135%;
   }
 
   &__wrap {
     position: absolute;
     right: 0;
-    top: 32px;
+    top: rem(32px);
 
     text-align: right;
   }
@@ -161,18 +175,18 @@ li {
   &__name:before,
   &__coll:before {
     display: block;
-    font-size: 18px;
+    font-size: rem(18px);
     line-height: 135%;
     text-align: right;
   }
 
   &__name {
-    margin: 6px 0 8px;
+    margin: rem(6px) 0 rem(8px);
   }
 
   &__name:before,
   &__coll:before {
-    font-size: 12px;
+    font-size: rem(12px);
 
     opacity: 0.5;
   }
@@ -188,7 +202,7 @@ li {
 
 .kg-card {
   width: 100%;
-  margin: 0 0 15px;
+  margin: 0 0 rem(15px);
   padding: 0;
 
   & iframe {
@@ -204,7 +218,7 @@ li {
     padding-top: 0;
 
     text-align: center;
-    font-size: 15px;
+    font-size: rem(15px);
     line-height: 135%;
   }
 }
@@ -220,8 +234,8 @@ li {
 
   padding: 0;
   right: 0;
-  width: 176px;
-  height: 158px;
+  width: rem(176px);
+  height: rem(158px);
   margin: 0;
 
   & img {
@@ -236,16 +250,16 @@ li {
     padding-top: 8px;
 
     text-align: center;
-    font-size: 12px;
+    font-size: rem(12px);
     line-height: 135%;
   }
 }
 
 .kg-embed-card {
-  margin-bottom: 24px;
+  margin-bottom: rem(24px);
 
   & iframe {
-    height: 330px;
+    height: rem(330px);
   }
 }
 
@@ -261,5 +275,5 @@ li {
 
   cursor: default;
   opacity: .5;
-  border-bottom: 1.15px solid var(--white);
+  border-bottom: 1.5px solid var(--white);
 }

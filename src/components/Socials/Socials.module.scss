@@ -1,5 +1,7 @@
+@import "../../styles/functions";
+
 .item {
-  margin-right: 4px;
+  margin-right: rem(4px);
 
   &:last-of-type {
     margin-right: 0;
@@ -12,8 +14,8 @@
 
 .link {
   display: block;
-  width: 32px;
-  height: 32px;
+  width: rem(32px);
+  height: rem(32px);
 
   & svg {
     width: 100%;

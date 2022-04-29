@@ -1,14 +1,16 @@
+@import "../../styles/functions";
+
 .wrapper {
   position: relative;
 
-  padding-top: 32px;
+  padding-top: rem(32px);
 }
 
 .title {
-  margin-bottom: 32px;
-  margin-right: 72px;
+  margin-bottom: rem(32px);
+  margin-right: rem(72px);
 
-  font-size: 48px;
+  font-size: rem(48px);
   line-height: 100%;
 }
 
@@ -17,16 +19,16 @@
 }
 
 .content {
-  max-width: 592px;
-  margin-right: 208px;
+  max-width: rem(592px);
+  margin-right: rem(208px);
 
-  color: #000000;
+  color: var(--black);
   font-feature-settings: 'tnum' on, 'lnum' on;
 
   & p {
-    margin-bottom: 24px;
+    margin-bottom: rem(24px);
 
-    font-size: 18px;
+    font-size: rem(18px);
     line-height: 155%;
 
     &:last-of-type {
@@ -35,10 +37,10 @@
   }
 
   & h3 {
-    padding-top: 16px;
-    margin-bottom: 32px;
+    padding-top: rem(16px);
+    margin-bottom: rem(32px);
 
-    font-size: 36px;
+    font-size: rem(36px);
     line-height: 100%;
 
     &:first-of-type {
@@ -57,48 +59,48 @@
 }
 
 .link {
-  margin-top: 32px;
+  margin-top: rem(32px);
 }
 
 .close {
   position: relative;
 
-  width: 56px;
-  height: 56px;
+  width: rem(56px);
+  height: rem(56px);
 
   cursor: pointer;
 
   & img {
-    width: 28px;
-    height: 28px;
+    width: rem(28px);
+    height: rem(28px);
   }
 }
 
 .close {
   position: absolute;
-  right: 32px;
-  top: 32px;
+  right: rem(32px);
+  top: rem(32px);
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   & img {
-    width: 28px;
-    height: 28px;
+    width: rem(28px);
+    height: rem(28px);
   }
 }
 
 .socials {
   position: absolute;
-  right: 32px;
-  bottom: 56px;
+  right: rem(32px);
+  bottom: rem(56px);
 
   flex-direction: column;
 
   & li {
     margin-right: 0;
-    margin-bottom: 4px;
+    margin-bottom: rem(4px);
   }
 
   & li:last-of-type {

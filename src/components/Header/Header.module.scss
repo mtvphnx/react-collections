@@ -1,13 +1,16 @@
+@import "../../styles/functions";
+
 .header {
-  padding: 4px 32px;
+  padding: rem(4px) rem(32px);
   display: flex;
   align-items: center;
+  height: rem(40px);
 
   background-color: var(--black);
 }
 
 .logo {
-  margin-right: 24px;
+  margin-right: rem(24px);
 }
 
 .title {

@@ -1,34 +1,38 @@
+const rem = (value) => {
+    return `${((value) / (value * 0 + 1)) / 16 * 1}rem`;
+}
+
 export const collection = [
     {
         id: 0,
         name: 'Комиксы',
         link: 'kolliektsiia-komiksov',
         style: {
-            width: '510px',
-            height: '400px',
-            right: '24px',
-            top: '45px'
+            width: rem(510),
+            height: rem(400),
+            right: rem(24),
+            top: rem(45)
         },
         shadow: {
-            filter: 'drop-shadow(25px 10px 0 var(--yellow))'
+            filter: `drop-shadow(${rem(25)} ${rem(10)} 0 var(--yellow))`
         },
         pin: {
-            top: '58px',
-            right: '36px'
+            top: rem(58),
+            right: rem(36)
         },
         mobile: {
             style: {
-                left: '40px',
-                bottom: '15px',
-                width: '245px',
-                height: '192px'
+                left: rem(40),
+                bottom: rem(15),
+                width: rem(245),
+                height: rem(192)
             },
             shadow: {
-                filter: 'drop-shadow(12px 5px 0 var(--yellow))'
+                filter: `drop-shadow(${rem(12)} ${rem(5)} 0 var(--yellow))`
             },
             pin: {
-                top: '28px',
-                right: '17px'
+                top: rem(28),
+                right: rem(17)
             }
         }
     },
@@ -37,31 +41,31 @@ export const collection = [
         name: 'Пластиковые карты',
         link: 'kolliektsiia-s-zapakhom-pyli-i-tliena',
         style: {
-            width: '386px',
-            height: '284px',
-            left: '677px',
-            bottom: '48px'
+            width: rem(386),
+            height: rem(284),
+            left: rem(677),
+            bottom: rem(48)
         },
         shadow: {
-            filter: 'drop-shadow(15px 20px 0 var(--yellow))'
+            filter: `drop-shadow(${rem(15)} ${rem(20)} 0 var(--yellow))`
         },
         pin: {
-            top: '64px',
-            right: '21px'
+            top: rem(64),
+            right: rem(21)
         },
         mobile: {
             style: {
-                bottom: '425px',
-                left: '12px',
-                width: '185px',
-                height: '136px'
+                bottom: rem(425),
+                left: rem(12),
+                width: rem(185),
+                height: rem(136)
             },
             shadow: {
-                filter: 'drop-shadow(7px 10px 0 var(--yellow))'
+                filter: `drop-shadow(${rem(7)} ${rem(10)} 0 var(--yellow))`
             },
             pin: {
-                top: '31px',
-                right: '10px'
+                top: rem(31),
+                right: rem(10)
             }
         }
     },
@@ -70,31 +74,31 @@ export const collection = [
         name: 'Награды',
         link: 'kolliektsiia',
         style: {
-            width: '293px',
-            height: '417px',
-            left: '74px',
-            top: '40px'
+            width: rem(293),
+            height: rem(417),
+            left: rem(74),
+            top: rem(40)
         },
         shadow: {
-            filter: 'drop-shadow(10px 20px 0 var(--yellow))'
+            filter: `drop-shadow(${rem(10)} ${rem(20)} 0 var(--yellow))`
         },
         pin: {
-            left: '17px',
-            bottom: '97px'
+            left: rem(17),
+            bottom: rem(97)
         },
         mobile: {
             style: {
-                top: '16px',
-                left: '32px',
-                width: '141px',
-                height: '200px'
+                top: rem(16),
+                left: rem(32),
+                width: rem(141),
+                height: rem(200)
             },
             shadow: {
-                filter: 'drop-shadow(5px 10px 0 var(--yellow))'
+                filter: `drop-shadow(${rem(5)} ${rem(10)} 0 var(--yellow))`
             },
             pin: {
-                left: '8px',
-                bottom: '47px'
+                left: rem(8),
+                bottom: rem(47)
             }
         }
     },
@@ -103,31 +107,31 @@ export const collection = [
         name: 'Водка Absolut',
         link: 'opianiaiushchaia-kolliektsiia-vodki-absolut',
         style: {
-            width: '246px',
-            height: '433px',
-            left: '1073px',
-            top: '49px'
+            width: rem(246),
+            height: rem(433),
+            left: rem(1073),
+            top: rem(49)
         },
         shadow: {
-            filter: 'drop-shadow(25px 10px 0 var(--yellow))'
+            filter: `drop-shadow(${rem(25)} ${rem(10)} 0 var(--yellow))`
         },
         pin: {
-            right: '28px',
-            bottom: '127px'
+            right: rem(28),
+            bottom: rem(127)
         },
         mobile: {
             style: {
-                left: '34px',
-                bottom: '578px',
-                width: '118px',
-                height: '208px'
+                left: rem(34),
+                bottom: rem(578),
+                width: rem(118),
+                height: rem(208)
             },
             shadow: {
-                filter: 'drop-shadow(12px 5px 0 var(--yellow))'
+                filter: `drop-shadow(${rem(12)} ${rem(5)} 0 var(--yellow))`
             },
             pin: {
-                right: '14px',
-                bottom: '61px'
+                right: rem(14),
+                bottom: rem(61)
             }
         }
     },
@@ -136,31 +140,31 @@ export const collection = [
         name: 'Пакетики с сахаром',
         link: 'kolliektsiia-ghliukofila-pakietiki-s-sakharom',
         style: {
-            width: '380px',
-            height: '236px',
-            left: '730px',
-            top: '590px'
+            width: rem(380),
+            height: rem(236),
+            left: rem(730),
+            top: rem(590)
         },
         shadow: {
-            filter: 'drop-shadow(25px 10px 0 var(--yellow))'
+            filter: `drop-shadow(${rem(25)} ${rem(10)} 0 var(--yellow))`
         },
         pin: {
-            top: '89px',
-            right: '70px'
+            top: rem(89),
+            right: rem(70)
         },
         mobile: {
             style: {
-                right: '44px',
-                bottom: '738px',
-                width: '182px',
-                height: '113px'
+                right: rem(44),
+                bottom: rem(738),
+                width: rem(182),
+                height: rem(113)
             },
             shadow: {
-                filter: 'drop-shadow(12px 5px 0 var(--yellow))'
+                filter: `drop-shadow(${rem(12)} ${rem(5)} 0 var(--yellow))`
             },
             pin: {
-                top: '43px',
-                right: '34px'
+                top: rem(43),
+                right: rem(34)
             }
         }
     },
@@ -169,31 +173,31 @@ export const collection = [
         name: 'Пачки сигарет',
         link: 'kolliektsiia-2',
         style: {
-            width: '318px',
-            height: '433px',
-            right: '819px',
-            bottom: '44px'
+            width: rem(318),
+            height: rem(433),
+            right: rem(819),
+            bottom: rem(44)
         },
         shadow: {
-            filter: 'drop-shadow(15px 25px 0 var(--yellow))'
+            filter: `drop-shadow(${rem(15)} ${rem(25)} 0 var(--yellow))`
         },
         pin: {
-            right: '64px',
-            bottom: '65px'
+            right: rem(64),
+            bottom: rem(65)
         },
         mobile: {
             style: {
-                width: '153px',
-                height: '208px',
-                top: '738px',
-                left: '26px'
+                width: rem(153),
+                height: rem(208),
+                top: rem(738),
+                left: rem(26)
             },
             shadow: {
-                filter: 'drop-shadow(7px 12px 0 var(--yellow))'
+                filter: `drop-shadow(${rem(7)} ${rem(12)} 0 var(--yellow))`
             },
             pin: {
-                bottom: '31px',
-                right: '31px'
+                bottom: rem(31),
+                right: rem(31)
             }
         }
     },
@@ -202,31 +206,31 @@ export const collection = [
         name: 'Машинки Hot Wheels',
         link: 'goriachaia-kolliektsiia',
         style: {
-            width: '450px',
-            height: '199px',
-            left: '88px',
-            bottom: '43px'
+            width: rem(450),
+            height: rem(199),
+            left: rem(88),
+            bottom: rem(43)
         },
         shadow: {
-            filter: 'drop-shadow(20px 18px 0 var(--yellow))'
+            filter: `drop-shadow(${rem(20)} ${rem(18)} 0 var(--yellow))`
         },
         pin: {
-            top: '17px',
-            left: '14px'
+            top: rem(17),
+            left: rem(14)
         },
         mobile: {
             style: {
-                top: '471px',
-                left: '27px',
-                width: '216px',
-                height: '95px'
+                top: rem(471),
+                left: rem(27),
+                width: rem(216),
+                height: rem(95)
             },
             shadow: {
-                filter: 'drop-shadow(10px 9px 0 var(--yellow))'
+                filter: `drop-shadow(${rem(10)} ${rem(9)} 0 var(--yellow))`
             },
             pin: {
-                top: '8px',
-                left: '7px'
+                top: rem(8),
+                left: rem(7)
             }
         }
     },
@@ -235,31 +239,31 @@ export const collection = [
         name: 'Фотографии мертвых птиц',
         link: 'kolliektsiia-kak-dan-pamiati-biezymiannym-zhivotnym',
         style: {
-            width: '383px',
-            height: '371px',
-            right: '62px',
-            bottom: '33px'
+            width: rem(383),
+            height: rem(371),
+            right: rem(62),
+            bottom: rem(33)
         },
         shadow: {
-            filter: 'drop-shadow(15px 18px 0 var(--yellow))'
+            filter: `drop-shadow(${rem(15)} ${rem(18)} 0 var(--yellow))`
         },
         pin: {
-            right: '34px',
-            bottom: '130px'
+            right: rem(34),
+            bottom: rem(130)
         },
         mobile: {
             style: {
-                bottom: '231px',
-                left: '9px',
-                width: '184px',
-                height: '178px'
+                bottom: rem(231),
+                left: rem(9),
+                width: rem(184),
+                height: rem(178)
             },
             shadow: {
-                filter: 'drop-shadow(7px 9px 0 var(--yellow))'
+                filter: `drop-shadow(${rem(7)} ${rem(9)} 0 var(--yellow))`
             },
             pin: {
-                bottom: '62px',
-                right: '16px',
+                bottom: rem(62),
+                right: rem(16),
             }
         }
     },
@@ -268,31 +272,31 @@ export const collection = [
         name: 'Винные пробки',
         link: 'kolliektsiia-vinnykh-probok',
         style: {
-            width: '215px',
-            height: '231px',
-            left: '808px',
-            top: '45px'
+            width: rem(215),
+            height: rem(231),
+            left: rem(808),
+            top: rem(45)
         },
         shadow: {
-            filter: 'drop-shadow(0 20px 0 var(--yellow))'
+            filter: `drop-shadow(0 ${rem(20)} 0 var(--yellow))`
         },
         pin: {
-            top: '32px',
-            right: '62px'
+            top: rem(32),
+            right: rem(62)
         },
         mobile: {
             style: {
-                top: '210px',
-                left: '117px',
-                width: '103px',
-                height: '110px'
+                top: rem(210),
+                left: rem(117),
+                width: rem(103),
+                height: rem(110)
             },
             shadow: {
-                filter: 'drop-shadow(0 10px 0 var(--yellow))'
+                filter: `drop-shadow(0 ${rem(10)} 0 var(--yellow))`
             },
             pin: {
-                top: '15px',
-                right: '30px'
+                top: rem(15),
+                right: rem(30)
             }
         }
     },
@@ -301,31 +305,31 @@ export const collection = [
         name: 'Наушники',
         link: 'kolliektsiia-slomannykh-naushnikov',
         style: {
-            width: '266px',
-            height: '334px',
-            right: '33px',
-            top: '469px'
+            width: rem(266),
+            height: rem(334),
+            right: rem(33),
+            top: rem(469)
         },
         shadow: {
-            filter: 'drop-shadow(10px 15px 0 var(--yellow))'
+            filter: `drop-shadow(${rem(10)} ${rem(15)} 0 var(--yellow))`
         },
         pin: {
-            top: '50px',
-            right: '18px'
+            top: rem(50),
+            right: rem(18)
         },
         mobile: {
             style: {
-                right: '18px',
-                bottom: '218px',
-                width: '128px',
-                height: '161px'
+                right: rem(18),
+                bottom: rem(218),
+                width: rem(128),
+                height: rem(161)
             },
             shadow: {
-                filter: 'drop-shadow(5px 7px 0 var(--yellow))'
+                filter: `drop-shadow(${rem(5)} ${rem(7)} 0 var(--yellow))`
             },
             pin: {
-                top: '24px',
-                right: '9px'
+                top: rem(24),
+                right: rem(9)
             }
         }
     },
@@ -334,31 +338,31 @@ export const collection = [
         name: 'Банки Pringles',
         link: 'kolliektsiia-so-vkusom-pringles',
         style: {
-            width: '342px',
-            height: '486px',
-            left: '347px',
-            top: '456px'
+            width: rem(342),
+            height: rem(486),
+            left: rem(347),
+            top: rem(456)
         },
         shadow: {
-            filter: 'drop-shadow(15px 25px 0 var(--yellow))'
+            filter: `drop-shadow(${rem(15)} ${rem(25)} 0 var(--yellow))`
         },
         pin: {
-            left: '46px',
-            bottom: '171px'
+            left: rem(46),
+            bottom: rem(171)
         },
         mobile: {
             style: {
-                top: '246px',
-                right: '9px',
-                width: '164px',
-                height: '233px'
+                top: rem(246),
+                right: rem(9),
+                width: rem(164),
+                height: rem(233)
             },
             shadow: {
-                filter: 'drop-shadow(7px 12px 0 var(--yellow))'
+                filter: `drop-shadow(${rem(7)} ${rem(12)} 0 var(--yellow))`
             },
             pin: {
-                bottom: '82px',
-                left: '22px'
+                bottom: rem(82),
+                left: rem(22)
             }
         }
     },
@@ -367,31 +371,31 @@ export const collection = [
         name: 'Значки',
         link: 'kolliektsionirovaniie-kak-obraz-zhizni',
         style: {
-            width: '285px',
-            height: '287px',
-            right: '571px',
-            top: '36px'
+            width: rem(285),
+            height: rem(287),
+            right: rem(571),
+            top: rem(36)
         },
         shadow: {
-            filter: 'drop-shadow(13px 20px 0 var(--yellow))'
+            filter: `drop-shadow(${rem(13)} ${rem(20)} 0 var(--yellow))`
         },
         pin: {
-            right: '19px',
-            bottom: '64px'
+            right: rem(19),
+            bottom: rem(64)
         },
         mobile: {
             style: {
-                top: '564px',
-                right: '10px',
-                width: '137px',
-                height: '138px'
+                top: rem(564),
+                right: rem(10),
+                width: rem(137),
+                height: rem(138)
             },
             shadow: {
-                filter: 'drop-shadow(6px 10px 0 var(--yellow))'
+                filter: `drop-shadow(${rem(6)} ${rem(10)} 0 var(--yellow))`
             },
             pin: {
-                bottom: '31px',
-                right: '10px'
+                bottom: rem(31),
+                right: rem(10)
             }
         }
     },
@@ -400,31 +404,31 @@ export const collection = [
         name: 'Пачки от хлопьев',
         link: 'kolliektsiia-korobok-sukhikh-zavtrakov',
         style: {
-            width: '328px',
-            height: '404px',
-            left: '423px',
-            top: '50px'
+            width: rem(328),
+            height: rem(404),
+            left: rem(423),
+            top: rem(50)
         },
         shadow: {
-            filter: 'drop-shadow(10px 20px 0 var(--yellow))'
+            filter: `drop-shadow(${rem(10)} ${rem(20)} 0 var(--yellow))`
         },
         pin: {
-            left: '16px',
-            top: '65px'
+            left: rem(16),
+            top: rem(65)
         },
         mobile: {
             style: {
-                top: '29px',
-                right: '10px',
-                width: '157px',
-                height: '194px'
+                top: rem(29),
+                right: rem(10),
+                width: rem(157),
+                height: rem(194)
             },
             shadow: {
-                filter: 'drop-shadow(5px 10px 0 var(--yellow))'
+                filter: `drop-shadow(${rem(5)} ${rem(10)} 0 var(--yellow))`
             },
             pin: {
-                top: '30px',
-                left: '7px'
+                top: rem(30),
+                left: rem(7)
             }
         }
     },
@@ -433,31 +437,31 @@ export const collection = [
         name: 'Подставки для пива',
         link: 'poddierzhivaiushchaia-kolliektsiia',
         style: {
-            width: '293px',
-            height: '278px',
-            left: '762px',
-            top: '284px'
+            width: rem(293),
+            height: rem(278),
+            left: rem(762),
+            top: rem(284)
         },
         shadow: {
-            filter: 'drop-shadow(10px 15px 0 var(--yellow))'
+            filter: `drop-shadow(${rem(10)} ${rem(15)} 0 var(--yellow))`
         },
         pin: {
-            left: '17px',
-            bottom: '66px'
+            left: rem(17),
+            bottom: rem(66)
         },
         mobile: {
             style: {
-                top: '582px',
-                left: '33px',
-                width: '141px',
-                height: '134px'
+                top: rem(582),
+                left: rem(33),
+                width: rem(141),
+                height: rem(134)
             },
             shadow: {
-                filter: 'drop-shadow(5px 7px 0 var(--yellow))'
+                filter: `drop-shadow(${rem(5)} ${rem(7)} 0 var(--yellow))`
             },
             pin: {
-                bottom: '32px',
-                left: '8px'
+                bottom: rem(32),
+                left: rem(8)
             }
         }
     },
@@ -466,31 +470,31 @@ export const collection = [
         name: 'Брелоки',
         link: 'nostalghich',
         style: {
-            width: '279px',
-            height: '466px',
-            left: '49px',
-            top: '475px'
+            width: rem(279),
+            height: rem(466),
+            left: rem(49),
+            top: rem(475)
         },
         shadow: {
-            filter: 'drop-shadow(15px 15px 0 var(--yellow))'
+            filter: `drop-shadow(${rem(15)} ${rem(15)} 0 var(--yellow))`
         },
         pin: {
-            right: '52px',
-            top: '200px'
+            right: rem(52),
+            top: rem(200)
         },
         mobile: {
             style: {
-                top: '232px',
-                left: '11px',
-                width: '134px',
-                height: '224px'
+                top: rem(232),
+                left: rem(11),
+                width: rem(134),
+                height: rem(224)
             },
             shadow: {
-                filter: 'drop-shadow(7px 7px 0 var(--yellow))'
+                filter: `drop-shadow(${rem(7)} ${rem(7)} 0 var(--yellow))`
             },
             pin: {
-                top: '96px',
-                right: '25px'
+                top: rem(96),
+                right: rem(25)
             }
         }
     },
@@ -499,31 +503,31 @@ export const collection = [
         name: 'Киндер-сюрпризы',
         link: 'shokoladnaia-kindier-kolliektsiia',
         style: {
-            width: '257px',
-            height: '364px',
-            right: '489px',
-            bottom: '36px'
+            width: rem(257),
+            height: rem(364),
+            right: rem(489),
+            bottom: rem(36)
         },
         shadow: {
-            filter: 'drop-shadow(12px 18px 0 var(--yellow))'
+            filter: `drop-shadow(${rem(12)} ${rem(18)} 0 var(--yellow))`
         },
         pin: {
-            right: '17px',
-            bottom: '73px'
+            right: rem(17),
+            bottom: rem(73)
         },
         mobile: {
             style: {
-                top: '719px',
-                right: '15px',
-                width: '132px',
-                height: '175px'
+                top: rem(719),
+                right: rem(15),
+                width: rem(132),
+                height: rem(175)
             },
             shadow: {
-                filter: 'drop-shadow(6px 9px 0 var(--yellow))'
+                filter: `drop-shadow(${rem(6)} ${rem(9)} 0 var(--yellow))`
             },
             pin: {
-                bottom: '35px',
-                right: '8px'
+                bottom: rem(35),
+                right: rem(8)
             }
         }
     },
@@ -532,31 +536,31 @@ export const collection = [
         name: 'Резиновые уточки',
         link: 'kriakaiushchaia-kolliektsiia-zhioltykh-utok',
         style: {
-            width: '320px',
-            height: '327px',
-            right: '651px',
-            top: '392px'
+            width: rem(320),
+            height: rem(327),
+            right: rem(651),
+            top: rem(392)
         },
         shadow: {
-            filter: 'drop-shadow(15px 13px 0 var(--yellow))'
+            filter: `drop-shadow(${rem(15)} ${rem(13)} 0 var(--yellow))`
         },
         pin: {
-            right: '16px',
-            bottom: '118px'
+            right: rem(16),
+            bottom: rem(118)
         },
         mobile: {
             style: {
-                bottom: '575px',
-                right: '15px',
-                width: '154px',
-                height: '157px'
+                bottom: rem(575),
+                right: rem(15),
+                width: rem(154),
+                height: rem(157)
             },
             shadow: {
-                filter: 'drop-shadow(7px 6px 0 var(--yellow))'
+                filter: `drop-shadow(${rem(7)} ${rem(6)} 0 var(--yellow))`
             },
             pin: {
-                bottom: '57px',
-                right: '8px'
+                bottom: rem(57),
+                right: rem(8)
             }
         }
     },
@@ -565,31 +569,31 @@ export const collection = [
         name: 'Фигурки Warhammer',
         link: 'samodielnaia-kolliektsiia-fighurok',
         style: {
-            width: '278px',
-            height: '298px',
-            right: '342px',
-            top: '494px'
+            width: rem(278),
+            height: rem(298),
+            right: rem(342),
+            top: rem(494)
         },
         shadow: {
-            filter: 'drop-shadow(18px 17px 0 var(--yellow))'
+            filter: `drop-shadow(${rem(18)} ${rem(17)} 0 var(--yellow))`
         },
         pin: {
-            left: '51px',
-            bottom: '17px'
+            left: rem(51),
+            bottom: rem(17)
         },
         mobile: {
             style: {
-                bottom: '396px',
-                right: '13px',
-                width: '134px',
-                height: '143px'
+                bottom: rem(396),
+                right: rem(13),
+                width: rem(134),
+                height: rem(143)
             },
             shadow: {
-                filter: 'drop-shadow(9px 8px 0 var(--yellow))'
+                filter: `drop-shadow(${rem(9)} ${rem(8)} 0 var(--yellow))`
             },
             pin: {
-                bottom: '8px',
-                left: '25px'
+                bottom: rem(8),
+                left: rem(25)
             }
         }
     }

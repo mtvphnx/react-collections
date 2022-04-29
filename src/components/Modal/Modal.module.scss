@@ -1,3 +1,5 @@
+@import "../../styles/functions";
+
 .modal {
   position: fixed;
   top: 0;
@@ -22,15 +24,15 @@
   position: relative;
 
   width: 100%;
-  max-width: 864px;
+  max-width: rem(864px);
 
-  margin: 0 20px;
-  max-height: calc(100vh - 160px);
+  margin: 0 rem(20px);
+  max-height: calc(100vh - rem(100px));
   display: flex;
   flex-direction: column;
 
   background: var(--white);
-  box-shadow: 8px 8px 0 var(--yellow);
+  box-shadow: rem(8px) rem(8px) 0 var(--yellow);
   border: 2px solid var(--black);
 
   animation-name: slide-in;
@@ -40,10 +42,10 @@
 .content {
   position: relative;
 
-  padding: 40px 32px 30px;
+  padding: rem(40px) rem(32px) rem(30px);
 
   &.second {
-    padding: 32px 32px 56px;
+    padding: rem(32px) rem(32px) rem(56px);
   }
 }
 
@@ -57,7 +59,7 @@
 }
 @keyframes slide-in {
   from {
-    transform: translateY(-150px);
+    transform: translateY(rem(-150px));
   }
   to {
     transform: translateY(0);

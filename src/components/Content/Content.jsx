@@ -1,7 +1,7 @@
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import {Element, Article} from '../../components';
 import styles from './Content.module.scss';
-import {collection} from '../../date';
+import {collection} from '../../data';
 
 export const Content = ({toggleState, first, content, getArticle}) => {
 

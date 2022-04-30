@@ -1,12 +1,10 @@
 @import "../../styles/functions";
 
-.logo {
+.logo, .link {
   width: rem(72px);
   height: rem(32px);
 }
 
 .link {
   display: block;
-  width: rem(72px);
-  height: rem(32px);
 }

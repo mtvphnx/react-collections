@@ -7,7 +7,13 @@ export const Content = ({toggleState, first, content, getArticle}) => {
 
     const elements = collection && collection.map(item => {
         const {id, link, ...props} = item;
-        return <Element key={id} id={id} link={link} handler={() => getArticle(link, 'first')} {...props}/>;
+        return (
+            <Element handler={() => getArticle(link, 'first')}
+                     key={id}
+                     id={id}
+                     link={link}
+                     {...props}/>
+        );
     })
 
     return (

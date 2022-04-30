@@ -16,10 +16,10 @@ export class App extends Component {
         const result = await server(),
             ready = result.map(item => item.slug);
 
-        const arrayElements = document.querySelectorAll('.element'),
+        const collectionElements = document.querySelectorAll('.element'),
             navElements = document.querySelectorAll('.nav');
 
-        arrayElements && arrayElements.forEach((item, index) => {
+        collectionElements && collectionElements.forEach((item, index) => {
             if (ready.indexOf(item.getAttribute('data-link')) === -1) {
                 item.classList.add('disabled');
                 navElements[index].classList.add('disabled');
@@ -29,6 +29,7 @@ export class App extends Component {
 
     getArticle = async (link, type) => {
         const result = await server(link);
+
         this.setState({content: result[0]});
         this.toggleState(type);
     }

@@ -1,6 +1,6 @@
 import {Component} from 'react';
 import {Header, Modal, Author, Content} from '../../components';
-import {server} from '../../services';
+import Server from '../../services/Server'
 import styles from './App.module.scss';
 
 export class App extends Component {
@@ -13,25 +13,29 @@ export class App extends Component {
     }
 
     async componentDidMount(){
-        const result = await server(),
-            ready = result.map(item => item.slug);
+        const list = new Server();
+        list.getResource().then(data => {
+            const ready = data.map(item => item.slug);
 
-        const collectionElements = document.querySelectorAll('.element'),
-            navElements = document.querySelectorAll('.nav');
+            const collectionElements = document.querySelectorAll('.element'),
+                navElements = document.querySelectorAll('.nav');
 
-        collectionElements && collectionElements.forEach((item, index) => {
-            if (ready.indexOf(item.getAttribute('data-link')) === -1) {
-                item.classList.add('disabled');
-                navElements[index].classList.add('disabled');
-            }
-        });
+            collectionElements && collectionElements.forEach((item, index) => {
+                if (ready.indexOf(item.getAttribute('data-link')) === -1) {
+                    item.classList.add('disabled');
+                    navElements[index].classList.add('disabled');
+                }
+            });
+        })
     }
 
     getArticle = async (link, type) => {
-        const result = await server(link);
+        const result = new Server();
 
-        this.setState({content: result[0]});
-        this.toggleState(type);
+        result.getResource(link).then(data => {
+            this.setState({content: data[0]});
+            this.toggleState(type);
+        })
     }
 
     toggleState = (name) => {

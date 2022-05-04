@@ -1,0 +1,37 @@
+@import "../../styles/functions";
+
+.arrows {
+  position: fixed;
+  right: rem(50px);
+  bottom: rem(50px);
+  transform: rotate(45deg);
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  width: rem(120px);
+  height: rem(110px);
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.arrow {
+  width: rem(50px);
+  height: rem(50px);
+  margin: rem(3px);
+
+  background-image: url('../../resources/pics/arrow-white.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  cursor: pointer;
+
+  &:hover {
+    background-image: url('../../resources/pics/arrow-black.png');
+  }
+}

@@ -35,10 +35,26 @@
   padding: rem(48px) rem(32px) rem(32px) rem(32px);
 
   background-color: var(--white);
+
+  @media (max-width: 768px) {
+    padding: rem(16px);
+    width: 100%;
+    min-width: 100%;
+
+    overflow: auto;
+  }
 }
 
-.title {
+h3.title {
   margin-bottom: rem(32px);
+
+  @media (max-width: 768px) {
+    margin-bottom: rem(25px);
+    width: rem(200px);
+
+    font-size: rem(25px);
+    line-height: 100%;
+  }
 }
 
 .item {
@@ -46,13 +62,36 @@
 
   & div {
     user-select: none;
+
+    @media (max-width: 768px) {
+      font-size: rem(16px);
+      line-height: rem(19px);
+    }
+
+    &:after {
+      @media (max-width: 768px) {
+        font-size: rem(16px);
+        line-height: rem(19px);
+      }
+    }
+  }
+
+  &:last-of-type {
+    @media (max-width: 768px) {
+      margin-bottom: 0;
+    }
   }
 }
 
 .list {
-  margin-bottom: rem(72px);
   column-count: 2;
   flex: 1;
+
+  @media (max-width: 768px) {
+    margin-bottom: rem(25px);
+
+    column-count: 1;
+  }
 }
 
 .footer {
@@ -60,6 +99,13 @@
   column-count: 2;
 
   border-top: 2px solid var(--black);
+
+  @media (max-width: 768px) {
+    padding-top: rem(25px);
+    column-count: 1;
+
+    border-top: 1px solid var(--black);
+  }
 }
 
 .authors {
@@ -67,6 +113,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding-right: rem(48px);
+    margin-bottom: rem(16px);
+  }
 }
 
 .divider {
@@ -81,6 +133,10 @@
 .author {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    margin-bottom: rem(5px);
+  }
 }
 
 .info {
@@ -88,4 +144,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    height: auto;
+  }
+}
+
+.copyright, .socials {
+  @media (max-width: 768px) {
+    margin-bottom: rem(16px);
+  }
 }

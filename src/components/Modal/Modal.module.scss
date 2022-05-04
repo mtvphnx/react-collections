@@ -37,6 +37,12 @@
 
   animation-name: slide-in;
   animation-duration: 0.5s;
+
+  @media (max-width: 768px) {
+    max-height: 100%;
+    margin: 0;
+    overflow: auto;
+  }
 }
 
 .content {
@@ -46,6 +52,10 @@
 
   &.second {
     padding: rem(32px) rem(32px) rem(56px);
+
+    @media (max-width: 768px) {
+      padding: rem(60px) rem(16px) rem(56px) rem(16px);
+    }
   }
 }
 
@@ -64,4 +74,10 @@
   to {
     transform: translateY(0);
   }
+}
+
+.mobileLogo {
+  position: absolute;
+  top: rem(10px);
+  left: rem(16px);
 }

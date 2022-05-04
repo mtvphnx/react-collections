@@ -52,8 +52,8 @@ export const Menu = ({handler, opened, toggleState, getArticle}) => {
                 </ul>
                 <div className={styles.footer}>
                     <div className={styles.info}>
-                        <div className="text-small">Спецпроект {media} © 2022</div>
-                        <Socials/>
+                        <div className={cn("text-small", styles.copyright)}>Спецпроект {media} © 2022</div>
+                        <Socials className={styles.socials}/>
                     </div>
                     <ul className={styles.authors}>
                         {autorsList}

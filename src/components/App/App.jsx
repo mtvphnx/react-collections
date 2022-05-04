@@ -1,4 +1,6 @@
 import {Component} from 'react';
+import {useMediaQuery} from 'react-responsive';
+import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 import {Header, Modal, Author, Content} from '../../components';
 import Server from '../../services/Server'
 import styles from './App.module.scss';
@@ -9,8 +11,11 @@ export class App extends Component {
         menu: false,
         first: false,
         second: false,
-        content: null
+        content: null,
+        text: 'Коллекция коллекционеров'
     }
+
+    targetElement = null;
 
     async componentDidMount(){
         const list = new Server();
@@ -27,6 +32,20 @@ export class App extends Component {
                 }
             });
         })
+
+        this.targetElement = document.querySelector('body');
+    }
+
+    checkoutOverflow = () => {
+        if (this.state.first || this.state.menu) {
+            disableBodyScroll(this.targetElement);
+        } else {
+            enableBodyScroll(this.targetElement);
+        }
+    }
+
+    componentDidUpdate() {
+        this.checkoutOverflow();
     }
 
     getArticle = async (link, type) => {
@@ -38,6 +57,10 @@ export class App extends Component {
         })
     }
 
+    getText = () => {
+        return this.state.content.title;
+    }
+
     toggleState = (name) => {
         this.setState({
             [name]: !this.state[`${name}`]
@@ -46,18 +69,22 @@ export class App extends Component {
 
     onClickAuthor = () => this.toggleState('author');
 
-    onClickMenu = () => this.toggleState('menu');
+    onClickMenu = () => {
+        this.toggleState('menu');
+    };
 
     render() {
-        const {author, menu, first, content} = this.state;
+        const {author, menu, first, content, text} = this.state;
 
         return (
             <>
                 <Header handler={this.onClickMenu}
                         getArticle={this.getArticle}
                         toggleState={this.toggleState}
+                        text={text}
                         opened={menu}/>
-                {author ? <Modal type={'big'} onClose={this.onClickAuthor}><Author handler={this.onClickAuthor}/></Modal> : null}
+
+                {author ? <AutorBlock handler={this.onClickAuthor} onClose={this.onClickAuthor}/> : null}
                 <div className={styles.canvas}>
                     <Content getArticle={this.getArticle}
                              toggleState={this.toggleState}
@@ -68,3 +95,12 @@ export class App extends Component {
         );
     }
 };
+
+const AutorBlock = ({handler, onClose}) => {
+    const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
+
+    const content = <div className={styles.modal}><Author handler={handler}/></div>,
+        modal = <Modal type={'big'} onClose={onClose}>{content}</Modal>;
+
+    return !isMobile ? modal : null;
+}

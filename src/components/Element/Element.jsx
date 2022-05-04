@@ -1,10 +1,10 @@
-import { useMediaQuery } from 'react-responsive';
+import {useMediaQuery} from 'react-responsive';
 import cn from 'classnames';
 import styles from './Element.module.scss';
 import icon from '../../resources/pics/pin.png';
 
 export const Element = ({name, link, pin, shadow, id, style, handler, mobile}) => {
-    const isMobile = useMediaQuery({ query: `(max-width: 720px)` });
+    const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
 
     return (
         <div className={cn('element', styles.element)}

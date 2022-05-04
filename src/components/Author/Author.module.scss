@@ -7,6 +7,10 @@
   align-items: center;
   margin-bottom: rem(72px);
 
+  @media (max-width: 768px) {
+    margin-bottom: rem(16px);
+  }
+
   & img {
     width: rem(72px);
     height: rem(72px);
@@ -27,19 +31,30 @@
   color: var(--black);
 }
 
-.modal {
-  column-count: 2;
-}
-
-
 .big {
   margin-bottom: rem(12px);
+
+  @media (max-width: 768px) {
+    margin-bottom: rem(16px);
+  }
 }
 
-.little {
+p.little {
   margin-bottom: rem(8px);
+
+  @media (max-width: 768px) {
+    margin-bottom: rem(16px);
+
+    font-size: rem(14px);
+    line-height: rem(20px);
+    letter-spacing: 0.01em;
+  }
 
   &:last-of-type {
     margin-bottom: rem(24px);
+
+    @media (max-width: 768px) {
+      margin-bottom: rem(16px);
+    }
   }
 }

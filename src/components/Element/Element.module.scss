@@ -8,7 +8,7 @@
     filter: drop-shadow(rem(5px) 0 0 var(--white)) drop-shadow(0 rem(5px) 0 var(--white)) drop-shadow(rem(-5px) 0 0 var(--white)) drop-shadow(0 rem(-5px) 0 var(--white));
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 768px) {
     filter: drop-shadow(rem(3px) 0 0 var(--white)) drop-shadow(0 rem(3px) 0 var(--white)) drop-shadow(rem(-3px) 0 0 var(--white)) drop-shadow(0 rem(-3px) 0 var(--white));
   }
 
@@ -24,7 +24,7 @@
   width: rem(59px);
   height: rem(59px);
 
-  @media (max-width: 720px) {
+  @media (max-width: 768px) {
     width: rem(28px);
     height: rem(28px);
   }

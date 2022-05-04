@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Hero, App} from './components';
 import './styles/reset.scss';
-import './styles/perfectscroll.scss';
 import './styles/global.scss';
 
 export class Collection extends React.Component {

@@ -4,6 +4,11 @@
   width: 100%;
   height: 100vh;
   display: flex;
+
+  @media (max-width: 768px) {
+    height: 100%;
+    flex-direction: column-reverse;
+  }
 }
 
 .info {
@@ -13,19 +18,39 @@
   padding: rem(32px) rem(124px) rem(56px) rem(32px);
   justify-content: space-between;
   flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: rem(20px) rem(16px) rem(28px) rem(16px);
+  }
 }
 
 .header {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    top: rem(10px);
+    z-index: 10;
+    width: calc(100% - rem(32px));
+  }
 }
 
 .title {
   margin-bottom: rem(24px);
+
+  @media (max-width: 768px) {
+    margin-bottom: rem(16px);
+  }
 }
 
 .paragraph {
   margin-bottom: rem(44px);
+
+  @media (max-width: 768px) {
+    margin-bottom: rem(16px);
+  }
 }
 
 .pic {
@@ -39,5 +64,11 @@
     height: 100%;
     object-fit: cover;
     object-position: left;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: rem(52px) rem(16px) 0 rem(16px);
+      height: rem(290px);
+    }
   }
 }

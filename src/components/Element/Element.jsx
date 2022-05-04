@@ -11,7 +11,7 @@ export const Element = ({name, link, pin, shadow, id, style, handler, mobile}) =
              data-link={link}
              onClick={handler}
              style={!isMobile ? style : mobile.style}>
-            <img src={`/elements/${id}.png`}
+            <img src={`${process.env.PUBLIC_URL}/elements/${id}.png`}
                  style={!isMobile ? shadow : mobile.shadow}
                  alt={name} />
             <img src={icon}

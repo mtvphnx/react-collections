@@ -4,7 +4,7 @@ import Scroll from 'react-scrollbar';
 import {useMediaQuery} from 'react-responsive';
 import {Element, Article, Arrows} from '../../components';
 import styles from './Content.module.scss';
-import {collection} from '../../data';
+import collection from '../../data/collection';
 
 export const Content = ({toggleState, first, content, getArticle}) => {
     useEffect(() => {

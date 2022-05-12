@@ -2,7 +2,7 @@ const rem = (value) => {
     return `${((value) / (value * 0 + 1)) / 16 * 1}rem`;
 }
 
-export const collection = [
+const collection = [
     {
         id: 0,
         name: 'Комиксы',
@@ -597,4 +597,6 @@ export const collection = [
             }
         }
     }
-]
+];
+
+export default collection;

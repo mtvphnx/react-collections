@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import {Link, Socials} from "../../components";
-import {collection} from '../../data'
+import collection from '../../data/collection'
 import styles from './Menu.module.scss';
 
 export const Menu = ({handler, opened, toggleState, getArticle}) => {

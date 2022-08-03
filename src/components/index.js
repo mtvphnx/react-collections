@@ -12,3 +12,4 @@ export * from './Article/Article';
 export * from './App/App';
 export * from './Hero/Hero';
 export * from './Arrows/Arrows';
+export * from './Spinner/Spinner';

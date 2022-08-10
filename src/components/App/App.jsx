@@ -11,8 +11,7 @@ export class App extends Component {
         menu: false,
         first: false,
         second: false,
-        content: null,
-        text: 'Коллекция коллекционеров'
+        content: null
     }
 
     targetElement = null;
@@ -57,10 +56,6 @@ export class App extends Component {
         })
     }
 
-    getText = () => {
-        return this.state.content.title;
-    }
-
     toggleState = (name) => {
         this.setState({
             [name]: !this.state[`${name}`]
@@ -74,14 +69,13 @@ export class App extends Component {
     };
 
     render() {
-        const {author, menu, first, content, text} = this.state;
+        const {author, menu, first, content} = this.state;
 
         return (
             <>
                 <Header handler={this.onClickMenu}
                         getArticle={this.getArticle}
                         toggleState={this.toggleState}
-                        text={text}
                         opened={menu}/>
 
                 {author ? <AutorBlock handler={this.onClickAuthor} onClose={this.onClickAuthor}/> : null}

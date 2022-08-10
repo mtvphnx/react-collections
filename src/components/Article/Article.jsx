@@ -3,14 +3,14 @@ import icon from '../../resources/icons/close.svg';
 import styles from './Article.module.scss';
 
 export const Article = ({handler, content}) => {
-    const {title, html, feature_image} = content;
+    const {title, html, feature_image, url} = content;
 
     const src = feature_image.replace('https://media.2x2tv.ru/content/images/', 'https://media.2x2tv.ru/content/images/size/h550/');
 
     const sharing = [
-        {id: 0, link: `https://vk.com/share.php?url=${'https://media.2x2tv.ru'}&title=${title}&image=${src}`},
-        {id: 1, link: `https://t.me/share/url?url=${'https://media.2x2tv.ru'}&text=${title}`},
-        {id: 2, link: `https://connect.ok.ru/offer?url=${'https://media.2x2tv.ru'}&title=${title}&imageUrl=${src}`},
+        {id: 0, link: `https://vk.com/share.php?url=${url}`},
+        {id: 1, link: `https://t.me/share/url?url=${url}`},
+        {id: 2, link: `https://connect.ok.ru/offer?url=${url}`},
     ];
 
     return (

@@ -16,8 +16,7 @@ const socials = [
 const socialsArray = [<Vk/>, <Telegram/>, <Odnoklassniki/>, <Youtube/>];
 
 export const Socials = ({className, data, ...props}) => {
-    const sharing = data;
-    const currentArray = !data ? socials : sharing;
+    const currentArray = !data ? socials : data;
 
     const list = currentArray.map(item => {
         const {id, link} = item;

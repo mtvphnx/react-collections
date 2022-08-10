@@ -3,6 +3,7 @@
 .element {
   position: absolute;
   cursor: pointer;
+  will-change: filter;
 
   &:hover {
     filter: drop-shadow(rem(5px) 0 0 var(--white)) drop-shadow(0 rem(5px) 0 var(--white)) drop-shadow(rem(-5px) 0 0 var(--white)) drop-shadow(0 rem(-5px) 0 var(--white));

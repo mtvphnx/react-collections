@@ -24,6 +24,7 @@
   position: relative;
 
   width: 100%;
+  height: rem(430px);
   max-width: rem(864px);
 
   margin: 0 rem(20px);
@@ -37,6 +38,10 @@
 
   animation-name: slide-in;
   animation-duration: 0.5s;
+
+  &.second {
+    height: 100%;
+  }
 
   @media (max-width: 768px) {
     max-height: 100%;

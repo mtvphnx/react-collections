@@ -358,7 +358,21 @@ li {
   }
 }
 
-.scrollarea .scrollbar-container.vertical .scrollbar,
-.scrollarea .scrollbar-container.horizontal .scrollbar {
-  background: var(--yellow)!important;
+
+.thumb-vertical,
+.thumb-horizontal {
+  background: var(--yellow);
+  opacity: .6;
+  cursor: pointer;
+  border-radius: rem(6px);
+}
+
+.thumb-vertical, .track-vertical,
+.canvas-wrapper > div ~ div:nth-of-type(3) {
+  width: rem(6px) !important;
+}
+
+.thumb-horizontal, .track-horizontal,
+.canvas-wrapper > div ~ div:nth-of-type(2) {
+  height: rem(6px) !important;
 }

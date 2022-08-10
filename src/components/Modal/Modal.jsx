@@ -1,6 +1,6 @@
 import {useEffect} from 'react';
 import cn from 'classnames';
-import Scroll from 'react-scrollbar';
+import { Scrollbars } from 'react-custom-scrollbars';
 import {useMediaQuery} from 'react-responsive';
 import {Logo} from '../../components';
 import styles from './Modal.module.scss';
@@ -19,13 +19,13 @@ export const Modal = ({onClose, type, className, children}) => {
     const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
 
     const desktop = (
-        <Scroll smoothScrolling={true}>
+        <Scrollbars renderThumbVertical={props => <div {...props} className="thumb-vertical"/>}>
             <div className={styles.body}>
                 <div className={cn(styles.content, type === 'second' ? styles.second : null)}>
                     {children}
                 </div>
             </div>
-        </Scroll>
+        </Scrollbars>
     );
 
     const mobile = (
@@ -40,7 +40,7 @@ export const Modal = ({onClose, type, className, children}) => {
     return (
         <div className={styles.modal}
              onClick={onClose}>
-            <div className={styles.dialog} onClick={e => e.stopPropagation()}>
+            <div className={cn(styles.dialog, type === 'second' ? styles.second : null)} onClick={e => e.stopPropagation()}>
                 {!isMobile ? desktop : mobile}
             </div>
         </div>

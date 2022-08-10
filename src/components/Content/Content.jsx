@@ -1,6 +1,5 @@
-import {Component, useEffect} from 'react';
-import PropTypes from 'prop-types';
-import Scroll from 'react-scrollbar';
+import {Component, useEffect, useRef} from 'react';
+import { Scrollbars } from 'react-custom-scrollbars';
 import {useMediaQuery} from 'react-responsive';
 import {Element, Article, Arrows} from '../../components';
 import styles from './Content.module.scss';
@@ -11,6 +10,8 @@ export const Content = ({toggleState, first, content, getArticle}) => {
         window.scrollTo(0, 0)
     }, [])
 
+    let scrollRef = useRef();
+
     const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
 
     const elements = collection && collection.map(item => {
@@ -20,11 +21,13 @@ export const Content = ({toggleState, first, content, getArticle}) => {
         );
     })
 
-    const desktop = <Scroll className="canvas-wrapper" horizontal={true} smoothScrolling={true}><Wrapper children={elements} /></Scroll>,
+    const desktop = <Scrollbars renderThumbHorizontal={props => <div {...props} className="thumb-horizontal"/>}
+                                renderThumbVertical={props => <div {...props} className="thumb-vertical"/>}
+                                ref={scrollRef} className="canvas-wrapper"><Wrapper scrollRef={scrollRef.current} children={elements} />
+                    </Scrollbars>,
         mobile = <Wrapper children={elements} />
 
     return (
-
         <>
             {isMobile ? mobile : desktop}
             {first ? <Article content={content} handler={() => toggleState('first')}/> : null}
@@ -33,25 +36,38 @@ export const Content = ({toggleState, first, content, getArticle}) => {
 }
 
 class Wrapper extends Component {
-    moveLayoute = (e) => {
+    moveLayout = (e) => {
         const currentArrow = e.currentTarget.getAttribute('data-arrow');
+        let position;
         switch (currentArrow) {
             case 'top':
-                this.context.scrollArea.scrollTop();
+                position = {
+                    top: 0,
+                    behavior: 'smooth'
+                };
                 break;
             case 'right':
-                this.context.scrollArea.scrollRight();
+                position = {
+                    left: this.props.scrollRef.view.clientWidth,
+                    behavior: 'smooth'
+                };
                 break;
             case 'left':
-                this.context.scrollArea.scrollLeft();
+                position = {
+                    left: 0,
+                    behavior: 'smooth'
+                };
                 break;
             case 'bottom':
-                this.context.scrollArea.scrollBottom();
+                position = {
+                    top: this.props.scrollRef.view.clientHeight,
+                    behavior: 'smooth'
+                };
                 break;
             default:
                 break;
         }
-        this.context.scrollArea.refresh();
+        this.props.scrollRef.view.scroll(position)
     }
 
     render(){
@@ -63,12 +79,8 @@ class Wrapper extends Component {
                     {this.props.children}
                 </div>
             </div>
-            <Arrows handlerClick={(e) => this.moveLayoute(e)}/>
+            <Arrows handlerClick={(e) => this.moveLayout(e)}/>
             </>
         );
     }
 }
-
-Wrapper.contextTypes = {
-    scrollArea: PropTypes.object
-};

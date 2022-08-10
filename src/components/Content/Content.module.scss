@@ -41,6 +41,7 @@
 .block {
   width: rem(2260px);
   height: rem(1200px);
+  min-height: 100%;
 
   @media (max-width: 768px) {
     width: rem(360px);

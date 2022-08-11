@@ -1,6 +1,5 @@
 import {Component} from 'react';
 import {useMediaQuery} from 'react-responsive';
-import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 import {Header, Modal, Author, Content} from '../../components';
 import Server from '../../services/Server'
 import styles from './App.module.scss';
@@ -8,6 +7,8 @@ import styles from './App.module.scss';
 export class App extends Component {
     state = {
         author: true,
+        hideAuthor: false,
+        hideArticle: false,
         menu: false,
         first: false,
         second: false,
@@ -15,6 +16,7 @@ export class App extends Component {
     }
 
     targetElement = null;
+    scrollPosition = null;
 
     async componentDidMount(){
         const list = new Server();
@@ -37,9 +39,14 @@ export class App extends Component {
 
     checkoutOverflow = () => {
         if (this.state.first || this.state.menu) {
-            disableBodyScroll(this.targetElement);
+            this.scrollPosition = window.pageYOffset;
+            document.body.classList.add('lock')
         } else {
-            enableBodyScroll(this.targetElement);
+            if (document.body.classList.contains('lock') && this.scrollPosition !== null && this.scrollPosition !== window.pageYOffset) {
+                window.scrollTo(0, this.scrollPosition);
+                this.scrollPosition = null;
+            }
+            document.body.classList.remove('lock');
         }
     }
 
@@ -62,14 +69,30 @@ export class App extends Component {
         })
     };
 
-    onClickAuthor = () => this.toggleState('author');
+    onClickAuthor = () => {
+        this.toggleState('hideAuthor');
+        setTimeout(() => {
+            this.toggleState('author');
+        }, 600);
+    }
 
-    onClickMenu = () => {
-        this.toggleState('menu');
-    };
+    onClickArticle = () => {
+        if (!this.state.first) {
+            this.toggleState('first');
+        } else {
+            this.toggleState('hideArticle');
+            setTimeout(() => {
+                this.toggleState('first');
+                this.toggleState('hideArticle');
+            }, 600);
+        }
+    }
+
+
+    onClickMenu = () =>  this.toggleState('menu');
 
     render() {
-        const {author, menu, first, content} = this.state;
+        const {author, menu, first, content, hideAuthor, hideArticle} = this.state;
 
         return (
             <>
@@ -78,23 +101,24 @@ export class App extends Component {
                         toggleState={this.toggleState}
                         opened={menu}/>
 
-                {author ? <AutorBlock handler={this.onClickAuthor} onClose={this.onClickAuthor}/> : null}
+                {author ? <AuthorBlock hide={hideAuthor ? 'hide': ''} handler={this.onClickAuthor} onClose={this.onClickAuthor}/> : null}
                 <div className={styles.canvas}>
                     <Content getArticle={this.getArticle}
-                             toggleState={this.toggleState}
+                             click={this.onClickArticle}
                              first={first}
-                             content={content} />
+                             content={content}
+                             hide={hideArticle}/>
                 </div>
             </>
         );
     }
 };
 
-const AutorBlock = ({handler, onClose}) => {
+const AuthorBlock = ({handler, onClose, hide}) => {
     const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
 
     const content = <div className={styles.modal}><Author handler={handler}/></div>,
-        modal = <Modal type={'big'} onClose={onClose}>{content}</Modal>;
+        modal = <Modal show={hide} type={'big'} onClose={onClose}>{content}</Modal>;
 
     return !isMobile ? modal : null;
 }

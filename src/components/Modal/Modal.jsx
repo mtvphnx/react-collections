@@ -5,7 +5,7 @@ import {useMediaQuery} from 'react-responsive';
 import {Logo} from '../../components';
 import styles from './Modal.module.scss';
 
-export const Modal = ({onClose, type, className, children}) => {
+export const Modal = ({onClose, type, children, show}) => {
     const onKeyDown = ({key}) => {
         if (key === 'Escape') onClose();
     }
@@ -38,9 +38,9 @@ export const Modal = ({onClose, type, className, children}) => {
     );
 
     return (
-        <div className={styles.modal}
+        <div className={cn(styles.modal, show ? styles.hide : '')}
              onClick={onClose}>
-            <div className={cn(styles.dialog, type === 'second' ? styles.second : null)} onClick={e => e.stopPropagation()}>
+            <div className={cn(styles.dialog, type === 'second' ? styles.second : null, show ? styles.hide : '')} onClick={e => e.stopPropagation()}>
                 {!isMobile ? desktop : mobile}
             </div>
         </div>

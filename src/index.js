@@ -63,6 +63,9 @@ export class Collection extends React.Component {
             newImage.src = image;
             window[image] = newImage;
         });
+
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
     }
 
     render() {

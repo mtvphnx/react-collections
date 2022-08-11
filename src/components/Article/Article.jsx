@@ -2,7 +2,7 @@ import {Modal, Link, Socials} from '../../components';
 import icon from '../../resources/icons/close.svg';
 import styles from './Article.module.scss';
 
-export const Article = ({handler, content}) => {
+export const Article = ({handler, hide, content}) => {
     const {title, html, feature_image, url} = content;
 
     const src = feature_image.replace('https://media.2x2tv.ru/content/images/', 'https://media.2x2tv.ru/content/images/size/h550/');
@@ -14,7 +14,7 @@ export const Article = ({handler, content}) => {
     ];
 
     return (
-        <Modal type={'second'} onClose={handler}>
+        <Modal show={hide} type={'second'} onClose={handler}>
             <div className={styles.close} onClick={handler}>
                 <img src={icon} alt="Закрыть"/>
             </div>

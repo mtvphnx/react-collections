@@ -5,9 +5,9 @@ import {Element, Article, Arrows} from '../../components';
 import styles from './Content.module.scss';
 import collection from '../../data/collection';
 
-export const Content = ({toggleState, first, content, getArticle}) => {
+export const Content = ({click, first, content, getArticle, hide}) => {
     useEffect(() => {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
     }, [])
 
     let scrollRef = useRef();
@@ -30,7 +30,7 @@ export const Content = ({toggleState, first, content, getArticle}) => {
     return (
         <>
             {isMobile ? mobile : desktop}
-            {first ? <Article content={content} handler={() => toggleState('first')}/> : null}
+            {first ? <Article hide={hide ? 'hide': ''} content={content} handler={click}/> : null}
         </>
     );
 }
@@ -75,7 +75,7 @@ class Wrapper extends Component {
             <>
             <div className={styles.block}>
                 <div className={styles.wrapper}>
-                    <div className={styles.bg}></div>
+                    <div className={styles.bg}/>
                     {this.props.children}
                 </div>
             </div>

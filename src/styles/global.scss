@@ -345,20 +345,6 @@ li {
   }
 }
 
-.canvas-wrapper.scrollarea  {
-  height: 100%;
-}
-
-
-.canvas-wrapper .scrollarea-content {
-  width: rem(2260px);
-
-  @media (max-width: 768px) {
-    width: rem(360px);
-  }
-}
-
-
 .thumb-vertical,
 .thumb-horizontal {
   background: var(--yellow);
@@ -375,4 +361,10 @@ li {
 .thumb-horizontal, .track-horizontal,
 .canvas-wrapper > div ~ div:nth-of-type(2) {
   height: rem(6px) !important;
+}
+
+.lock {
+  overflow: hidden;
+  height: 100vh;
+  height: calc((var(--vh,1vh) * 100));
 }

@@ -24,7 +24,7 @@ export const Menu = ({handler, opened, toggleState, getArticle}) => {
 
         return (
             <li className={styles.item} key={id}>
-                <Link text={name} tag={'div'} className='nav' data-link={link} onClick={() => clickHandler(link, 'first', 'menu')} />
+                <Link text={name} tag={'div'} className='nav disabled' data-link={link} onClick={() => clickHandler(link, 'first', 'menu')} />
             </li>
         )
     })

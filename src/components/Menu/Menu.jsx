@@ -19,7 +19,7 @@ export const Menu = ({handler, opened, toggleState, getArticle}) => {
         getArticle(link, 'first')
     }
 
-    const collectionslist = collection.map(item => {
+    const collectionsList = collection.map(item => {
         const {id, name, link} = item;
 
         return (
@@ -29,7 +29,7 @@ export const Menu = ({handler, opened, toggleState, getArticle}) => {
         )
     })
 
-    const autorsList = authors.map(item => {
+    const authorsList = authors.map(item => {
         const {id, role, name} = item;
 
         return (
@@ -48,7 +48,7 @@ export const Menu = ({handler, opened, toggleState, getArticle}) => {
             <div className={styles.container} onClick={e => e.stopPropagation()}>
                 <h3 className={cn('h3', styles.title)}>Коллекция коллекционеров</h3>
                 <ul className={styles.list}>
-                    {collectionslist}
+                    {collectionsList}
                 </ul>
                 <div className={styles.footer}>
                     <div className={styles.info}>
@@ -56,7 +56,7 @@ export const Menu = ({handler, opened, toggleState, getArticle}) => {
                         <Socials className={styles.socials}/>
                     </div>
                     <ul className={styles.authors}>
-                        {autorsList}
+                        {authorsList}
                     </ul>
                 </div>
             </div>

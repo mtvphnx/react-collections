@@ -7,7 +7,7 @@ export const Element = ({name, link, pin, shadow, id, style, handler, mobile}) =
     const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
 
     return (
-        <div className={cn('element', styles.element)}
+        <div className={cn('element', 'disabled', styles.element)}
              data-link={link}
              onClick={handler}
              style={!isMobile ? style : mobile.style}>

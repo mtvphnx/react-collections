@@ -25,9 +25,9 @@ export class App extends Component {
                 navElements = document.querySelectorAll('.nav');
 
             collectionElements && collectionElements.forEach((item, index) => {
-                if (ready.indexOf(item.getAttribute('data-link')) === -1) {
-                    item.classList.add('disabled');
-                    navElements[index].classList.add('disabled');
+                if (ready.indexOf(item.getAttribute('data-link')) !== -1) {
+                    item.classList.remove('disabled');
+                    navElements[index].classList.remove('disabled');
                 }
             });
         })

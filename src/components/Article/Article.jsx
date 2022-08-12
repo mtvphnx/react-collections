@@ -30,12 +30,12 @@ export class Article extends Component {
 
     render() {
         const {loading, handler, hide, content} = this.props;
-        const {title, html, url} = content;
+        const {title, html} = content;
 
         const sharing = [
-            {id: 0, link: `https://vk.com/share.php?url=${url}`},
-            {id: 1, link: `https://t.me/share/url?url=${url}`},
-            {id: 2, link: `https://connect.ok.ru/offer?url=${url}`},
+            {id: 0, link: `https://vk.com/share.php?url=${document.location.href}&title=${title}&image=${this.src}`},
+            {id: 1, link: `https://t.me/share/url?url=${document.location.href}&text=${title}`},
+            {id: 2, link: `https://connect.ok.ru/offer?url=${document.location.href}&title=${title}&imageUrl=${this.src}`},
         ];
 
         const articleModal =

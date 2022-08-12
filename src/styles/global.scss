@@ -375,5 +375,16 @@ li {
 
   & img {
     filter: drop-shadow(2px 4px 6px black);
+    animation-name: appear;
+    animation-duration: 1s;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

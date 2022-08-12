@@ -12,7 +12,8 @@ export class App extends Component {
         menu: false,
         first: false,
         second: false,
-        content: null
+        content: null,
+        articleLoading: true
     }
 
     targetElement = null;
@@ -69,6 +70,12 @@ export class App extends Component {
         })
     };
 
+    articleIsLoad = () => {
+        this.setState({
+            articleLoading: !this.state.articleLoading
+        })
+    }
+
     onClickAuthor = () => {
         this.toggleState('hideAuthor');
         setTimeout(() => {
@@ -84,15 +91,15 @@ export class App extends Component {
             setTimeout(() => {
                 this.toggleState('first');
                 this.toggleState('hideArticle');
+                this.toggleState('articleLoading')
             }, 600);
         }
     }
 
-
     onClickMenu = () =>  this.toggleState('menu');
 
     render() {
-        const {author, menu, first, content, hideAuthor, hideArticle} = this.state;
+        const {author, menu, first, content, hideAuthor, hideArticle, articleLoading} = this.state;
 
         return (
             <>
@@ -107,7 +114,9 @@ export class App extends Component {
                              click={this.onClickArticle}
                              first={first}
                              content={content}
-                             hide={hideArticle}/>
+                             hide={hideArticle}
+                             loading={articleLoading}
+                             loadingHandler={this.articleIsLoad}/>
                 </div>
             </>
         );

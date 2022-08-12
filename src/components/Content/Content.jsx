@@ -5,7 +5,7 @@ import {Element, Article, Arrows} from '../../components';
 import styles from './Content.module.scss';
 import collection from '../../data/collection';
 
-export const Content = ({click, first, content, getArticle, hide}) => {
+export const Content = ({click, first, content, getArticle, hide, loading, loadingHandler}) => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
@@ -30,7 +30,7 @@ export const Content = ({click, first, content, getArticle, hide}) => {
     return (
         <>
             {isMobile ? mobile : desktop}
-            {first ? <Article hide={hide ? 'hide': ''} content={content} handler={click}/> : null}
+            {first ? <Article loadingHandler={loadingHandler} loading={loading} hide={hide ? 'hide': ''} content={content} handler={click}/> : null}
         </>
     );
 }

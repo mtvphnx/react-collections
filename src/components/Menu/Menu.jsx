@@ -7,11 +7,12 @@ export const Menu = ({handler, opened, toggleState, getArticle}) => {
 
     const authors = [
         {id: 0, role: 'Текст и идея', name: 'Наташа Лобачёва'},
-        {id: 1, role: 'Иллюстратор', name: 'Анастасия Dorisovala'},
-        {id: 2, role: 'Дизайн', name: 'Артём Сизов'},
-        {id: 3, role: 'Художница', name: 'Маргарита Правосудова'},
-        {id: 4, role: 'Художница', name: 'Евгения Лазарева'},
-        {id: 5, role: 'Разработка', name: 'Матвей Феникс'}
+        {id: 1, role: 'Продюсер', name: 'Эльмира Любаева'},
+        {id: 2, role: 'Иллюстратор', name: 'Анастасия Dorisovala'},
+        {id: 3, role: 'Дизайн', name: 'Артём Сизов'},
+        {id: 4, role: 'Художница', name: 'Маргарита Правосудова'},
+        {id: 5, role: 'Художница', name: 'Евгения Лазарева'},
+        {id: 6, role: 'Разработка', name: 'Матвей Феникс'}
     ];
 
     const clickHandler = (link, modal, close) => {

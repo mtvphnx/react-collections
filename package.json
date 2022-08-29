@@ -1,7 +1,7 @@
 {
   "name": "collection",
-  "homepage": "https://mtvphnx.github.io/react-collections",
-  "version": "0.1.0",
+  "homepage": "/action/collections/",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",

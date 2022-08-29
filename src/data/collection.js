@@ -400,39 +400,6 @@ const collection = [
         }
     },
     {
-        id: 12,
-        name: 'Пачки от хлопьев',
-        link: 'kolliektsiia-korobok-sukhikh-zavtrakov',
-        style: {
-            width: rem(328),
-            height: rem(404),
-            left: rem(423),
-            top: rem(50)
-        },
-        shadow: {
-            filter: `drop-shadow(${rem(10)} ${rem(20)} 0 var(--yellow))`
-        },
-        pin: {
-            left: rem(16),
-            top: rem(65)
-        },
-        mobile: {
-            style: {
-                top: rem(29),
-                right: rem(10),
-                width: rem(157),
-                height: rem(194)
-            },
-            shadow: {
-                filter: `drop-shadow(${rem(5)} ${rem(10)} 0 var(--yellow))`
-            },
-            pin: {
-                top: rem(30),
-                left: rem(7)
-            }
-        }
-    },
-    {
         id: 13,
         name: 'Подставки для пива',
         link: 'poddierzhivaiushchaia-kolliektsiia',

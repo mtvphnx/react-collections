@@ -10,7 +10,7 @@ const collection = [
         style: {
             width: rem(510),
             height: rem(400),
-            right: rem(24),
+            right: rem(274),
             top: rem(45)
         },
         shadow: {
@@ -23,7 +23,7 @@ const collection = [
         mobile: {
             style: {
                 left: rem(40),
-                bottom: rem(15),
+                bottom: rem(279),
                 width: rem(245),
                 height: rem(192)
             },
@@ -55,7 +55,7 @@ const collection = [
         },
         mobile: {
             style: {
-                bottom: rem(425),
+                bottom: rem(689),
                 left: rem(12),
                 width: rem(185),
                 height: rem(136)
@@ -122,7 +122,7 @@ const collection = [
         mobile: {
             style: {
                 left: rem(34),
-                bottom: rem(578),
+                bottom: rem(842),
                 width: rem(118),
                 height: rem(208)
             },
@@ -155,7 +155,7 @@ const collection = [
         mobile: {
             style: {
                 right: rem(44),
-                bottom: rem(738),
+                bottom: rem(1002),
                 width: rem(182),
                 height: rem(113)
             },
@@ -175,7 +175,7 @@ const collection = [
         style: {
             width: rem(318),
             height: rem(433),
-            right: rem(819),
+            right: rem(1069),
             bottom: rem(44)
         },
         shadow: {
@@ -241,7 +241,7 @@ const collection = [
         style: {
             width: rem(383),
             height: rem(371),
-            right: rem(62),
+            right: rem(312),
             bottom: rem(33)
         },
         shadow: {
@@ -253,7 +253,7 @@ const collection = [
         },
         mobile: {
             style: {
-                bottom: rem(231),
+                bottom: rem(495),
                 left: rem(9),
                 width: rem(184),
                 height: rem(178)
@@ -307,7 +307,7 @@ const collection = [
         style: {
             width: rem(266),
             height: rem(334),
-            right: rem(33),
+            right: rem(283),
             top: rem(469)
         },
         shadow: {
@@ -320,7 +320,7 @@ const collection = [
         mobile: {
             style: {
                 right: rem(18),
-                bottom: rem(218),
+                bottom: rem(482),
                 width: rem(128),
                 height: rem(161)
             },
@@ -373,7 +373,7 @@ const collection = [
         style: {
             width: rem(285),
             height: rem(287),
-            right: rem(571),
+            right: rem(821),
             top: rem(36)
         },
         shadow: {
@@ -396,6 +396,43 @@ const collection = [
             pin: {
                 bottom: rem(31),
                 right: rem(10)
+            }
+        }
+    },
+    {
+        id: 12,
+        name: 'Компакт-диски, винил и флаеры',
+        link: 'ot-kassiet-do',
+        style: {
+            width: rem(294),
+            height: rem(307),
+            left: rem(430),
+            top: rem(116)
+        },
+        shadow: {
+            filter: `drop-shadow(${rem(10)} ${rem(20)} 0 var(--yellow))`
+        },
+        pin: {
+            left: rem(80),
+            bottom: rem(18)
+        },
+
+
+
+
+        mobile: {
+            style: {
+                top: rem(48),
+                right: rem(22),
+                width: rem(139),
+                height: rem(145)
+            },
+            shadow: {
+                filter: `drop-shadow(${rem(5)} ${rem(10)} 0 var(--yellow))`
+            },
+            pin: {
+                bottom: rem(8),
+                left: rem(38)
             }
         }
     },
@@ -472,7 +509,7 @@ const collection = [
         style: {
             width: rem(257),
             height: rem(364),
-            right: rem(489),
+            right: rem(739),
             bottom: rem(36)
         },
         shadow: {
@@ -505,7 +542,7 @@ const collection = [
         style: {
             width: rem(320),
             height: rem(327),
-            right: rem(651),
+            right: rem(900),
             top: rem(392)
         },
         shadow: {
@@ -517,7 +554,7 @@ const collection = [
         },
         mobile: {
             style: {
-                bottom: rem(575),
+                bottom: rem(839),
                 right: rem(15),
                 width: rem(154),
                 height: rem(157)
@@ -538,7 +575,7 @@ const collection = [
         style: {
             width: rem(278),
             height: rem(298),
-            right: rem(342),
+            right: rem(592),
             top: rem(494)
         },
         shadow: {
@@ -550,7 +587,75 @@ const collection = [
         },
         mobile: {
             style: {
-                bottom: rem(396),
+                bottom: rem(660),
+                right: rem(13),
+                width: rem(134),
+                height: rem(143)
+            },
+            shadow: {
+                filter: `drop-shadow(${rem(9)} ${rem(8)} 0 var(--yellow))`
+            },
+            pin: {
+                bottom: rem(8),
+                left: rem(25)
+            }
+        }
+    },
+
+
+    {
+        id: 18,
+        name: 'Фигурки Warhammer',
+        link: 'samodielnaia-kolliektsiia-fighurok',
+        style: {
+            width: rem(278),
+            height: rem(298),
+            right: rem(0),
+            top: rem(494)
+        },
+        shadow: {
+            filter: `drop-shadow(${rem(18)} ${rem(17)} 0 var(--yellow))`
+        },
+        pin: {
+            left: rem(51),
+            bottom: rem(17)
+        },
+        mobile: {
+            style: {
+                bottom: rem(660),
+                right: rem(13),
+                width: rem(134),
+                height: rem(143)
+            },
+            shadow: {
+                filter: `drop-shadow(${rem(9)} ${rem(8)} 0 var(--yellow))`
+            },
+            pin: {
+                bottom: rem(8),
+                left: rem(25)
+            }
+        }
+    },
+    {
+        id: 19,
+        name: 'Фигурки Warhammer',
+        link: 'samodielnaia-kolliektsiia-fighurok',
+        style: {
+            width: rem(278),
+            height: rem(298),
+            right: rem(40),
+            bottom: rem(10)
+        },
+        shadow: {
+            filter: `drop-shadow(${rem(18)} ${rem(17)} 0 var(--yellow))`
+        },
+        pin: {
+            left: rem(51),
+            bottom: rem(17)
+        },
+        mobile: {
+            style: {
+                bottom: rem(660),
                 right: rem(13),
                 width: rem(134),
                 height: rem(143)

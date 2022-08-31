@@ -39,12 +39,12 @@
 }
 
 .block {
-  width: rem(2260px);
+  width: rem(2510px);
   height: rem(1200px);
   min-height: 100%;
 
   @media (max-width: 768px) {
     width: rem(360px);
-    height: rem(1775px);
+    height: rem(2039px);
   }
 }

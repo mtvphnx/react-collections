@@ -401,7 +401,7 @@ const collection = [
     },
     {
         id: 12,
-        name: 'Компакт-диски, винил и флаеры',
+        name: 'Диски, винил и флаеры',
         link: 'ot-kassiet-do',
         style: {
             width: rem(294),
@@ -416,10 +416,6 @@ const collection = [
             left: rem(80),
             bottom: rem(18)
         },
-
-
-
-
         mobile: {
             style: {
                 top: rem(48),
@@ -601,74 +597,72 @@ const collection = [
             }
         }
     },
-
-
     {
         id: 18,
-        name: 'Фигурки Warhammer',
-        link: 'samodielnaia-kolliektsiia-fighurok',
+        name: 'Факты и слёзы',
+        link: 'kolliektsiia-khudozhnitsy-100-prichin-pochiemu-plachiet-liev-tolstoi',
         style: {
-            width: rem(278),
-            height: rem(298),
-            right: rem(0),
-            top: rem(494)
+            width: rem(130),
+            height: rem(361),
+            right: rem(87),
+            top: rem(201)
         },
         shadow: {
-            filter: `drop-shadow(${rem(18)} ${rem(17)} 0 var(--yellow))`
+            filter: `drop-shadow(${rem(12)} ${rem(10)} 0 var(--yellow))`
         },
         pin: {
-            left: rem(51),
-            bottom: rem(17)
+            top: rem(49),
+            right: rem(5)
         },
         mobile: {
             style: {
-                bottom: rem(660),
-                right: rem(13),
-                width: rem(134),
-                height: rem(143)
+                bottom: rem(70),
+                right: rem(57),
+                width: rem(71),
+                height: rem(197)
             },
             shadow: {
-                filter: `drop-shadow(${rem(9)} ${rem(8)} 0 var(--yellow))`
+                filter: `drop-shadow(${rem(6)} ${rem(5)} 0 var(--yellow))`
             },
             pin: {
-                bottom: rem(8),
-                left: rem(25)
+                top: rem(15),
+                right: rem(2)
             }
         }
     },
     {
         id: 19,
-        name: 'Фигурки Warhammer',
-        link: 'samodielnaia-kolliektsiia-fighurok',
+        name: 'Скрепки',
+        link: 'kolliektsiia-skriepok-kak-khoroshii-znak-ot-vsieliennoi',
         style: {
-            width: rem(278),
-            height: rem(298),
-            right: rem(40),
-            bottom: rem(10)
+            width: rem(168),
+            height: rem(240),
+            right: rem(106),
+            bottom: rem(218)
         },
         shadow: {
-            filter: `drop-shadow(${rem(18)} ${rem(17)} 0 var(--yellow))`
+            filter: `drop-shadow(${rem(15)} ${rem(18)} 0 var(--yellow))`
         },
         pin: {
-            left: rem(51),
-            bottom: rem(17)
+            left: rem(-10),
+            bottom: rem(25)
         },
         mobile: {
             style: {
-                bottom: rem(660),
-                right: rem(13),
-                width: rem(134),
-                height: rem(143)
+                bottom: rem(75),
+                left: rem(33),
+                width: rem(130),
+                height: rem(185)
             },
             shadow: {
-                filter: `drop-shadow(${rem(9)} ${rem(8)} 0 var(--yellow))`
+                filter: `drop-shadow(${rem(7)} ${rem(9)} 0 var(--yellow))`
             },
             pin: {
-                bottom: rem(8),
-                left: rem(25)
+                bottom: rem(28),
+                left: rem(2),
             }
         }
-    }
+    },
 ];
 
 export default collection;

@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/react-collections/static/css/main.45d555aa.css",
-    "main.js": "/react-collections/static/js/main.a6cc9770.js",
-    "static/media/hero.jpg": "/react-collections/static/media/hero.2ba702aa09df94631330.jpg",
+    "main.css": "/react-collections/static/css/main.eba88ab4.css",
+    "main.js": "/react-collections/static/js/main.a864418a.js",
+    "static/media/hero.jpg": "/react-collections/static/media/hero.bb848413ab9bf38350e2.jpg",
     "static/media/icons.png": "/react-collections/static/media/icons.50f3103f6bdb4e92ce6a.png",
     "static/media/author.jpg": "/react-collections/static/media/author.1c25f831a74b26477152.jpg",
     "static/media/papper.jpg": "/react-collections/static/media/papper.d1cf216cb6110c8bf4bb.jpg",
@@ -15,11 +15,11 @@
     "static/media/logo.svg": "/react-collections/static/media/logo.f723a5fe6e07ff9b9ba190957235fd0f.svg",
     "static/media/burger.svg": "/react-collections/static/media/burger.4e50e677814fe1de4202b6d8d01eb996.svg",
     "static/media/close.svg": "/react-collections/static/media/close.f689c06619d676329828d5b274f80bf7.svg",
-    "main.45d555aa.css.map": "/react-collections/static/css/main.45d555aa.css.map",
-    "main.a6cc9770.js.map": "/react-collections/static/js/main.a6cc9770.js.map"
+    "main.eba88ab4.css.map": "/react-collections/static/css/main.eba88ab4.css.map",
+    "main.a864418a.js.map": "/react-collections/static/js/main.a864418a.js.map"
   },
   "entrypoints": [
-    "static/css/main.45d555aa.css",
-    "static/js/main.a6cc9770.js"
+    "static/css/main.eba88ab4.css",
+    "static/js/main.a864418a.js"
   ]
 }

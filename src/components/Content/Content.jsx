@@ -60,7 +60,7 @@ class Wrapper extends Component {
                 break;
             case 'bottom':
                 position = {
-                    top: this.props.scrollRef.view.clientHeight,
+                    top: document.getElementById('block').getBoundingClientRect().height,
                     behavior: 'smooth'
                 };
                 break;
@@ -73,7 +73,7 @@ class Wrapper extends Component {
     render(){
         return (
             <>
-            <div className={styles.block}>
+            <div className={styles.block} id="block">
                 <div className={styles.wrapper}>
                     <div className={styles.bg}/>
                     {this.props.children}
